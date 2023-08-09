@@ -1,0 +1,13 @@
+h1 {
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  width: 10rem;
+  height: 10rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #353531;
+  text-align: center;
+  padding-top: 15px;
+  background-color: rgb(162, 152, 139);
+  text-shadow: 0 0 5px #ec4e20, 0 0 5px #ff9505, 0 0 5px #016fb9, 0 0 5px#016FB9, 0 0 5px #f2f3d9,
+    0 0 5px #7cb518;
+}

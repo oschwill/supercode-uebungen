@@ -1,0 +1,12 @@
+main section {
+  text-align: center;
+  color: #fff;
+  height: 150px;
+  background: url('../assets/img/bild.avif') center;
+  background-size: contain;
+}
+
+main article {
+  background: url('../assets/img/bild2.avif') no-repeat right;
+  background-size: contain;
+}

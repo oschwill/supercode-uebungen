@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.backgrounds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgrounds > div {
+  margin-right: 10px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+
+.backgrounds .b-color {
+  background-color: orange;
+}
+
+.backgrounds .b-image {
+  background: url('../assets/img/Corn.jpg') no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.backgrounds .b-gradient {
+  background: rgb(241, 160, 52);
+  background: linear-gradient(90deg, rgba(241, 160, 52, 1) 50%, rgba(2, 0, 36, 1) 100%);
+}

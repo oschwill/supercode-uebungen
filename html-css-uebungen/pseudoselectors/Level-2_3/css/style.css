@@ -1,0 +1,31 @@
+body {
+  font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+div h1 {
+  text-align: center;
+}
+
+div h1:hover {
+  color: aqua;
+}
+
+div:nth-of-type(3) {
+  background-color: aquamarine;
+}
+
+div ul li:not(:last-child) {
+  font-style: italic;
+}
+
+div:last-of-type {
+  text-align: center;
+}
+
+div:last-of-type a:hover {
+  font-size: 1.3rem;
+}
+
+div:last-of-type a:focus {
+  color: rgb(254, 6, 6);
+}
