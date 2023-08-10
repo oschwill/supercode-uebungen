@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  display: block;
+  color: #fff;
+  margin: 0 auto;
+  height: 30px;
+  width: 250px;
+  background-color: rgb(56, 56, 132);
+  text-align: center;
+}
+
+.pic img {
+  display: none;
+  margin: 50px auto;
+  height: 10%;
+  width: 10%;
+}
+
+button:hover + .pic img {
+  display: block;
+}

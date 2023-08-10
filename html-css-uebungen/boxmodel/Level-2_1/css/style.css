@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+h1,
+h2,
+h3 {
+  border-radius: 25px;
+}
+
+h1 {
+  border: 4px #000 dashed;
+  text-align: center;
+}
+
+p {
+  color: purple;
+  border: 4px orange solid;
+}
+
+p::first-letter {
+  font-size: 2rem;
+}
+
+p:nth-of-type(1):hover::first-letter {
+  font-size: 3rem;
+  color: red;
+}
+p:nth-of-type(2):hover::first-letter {
+  font-size: 3rem;
+  color: red;
+}
+p:nth-of-type(3):hover::first-letter {
+  font-size: 3rem;
+  color: red;
+}
+p:nth-of-type(4):hover::first-letter {
+  font-size: 3rem;
+  color: red;
+}
+p:nth-of-type(5):hover::first-letter {
+  font-size: 3rem;
+  color: red;
+}
+p:nth-of-type(6):hover::first-letter {
+  font-size: 3rem;
+  color: red;
+}
+
+h2 {
+  border: 1px #000 solid;
+  text-align: center;
+  box-shadow: 0px 0px 10px 2px #000;
+}
+
+h3 {
+  text-align: center;
+  width: 150px;
+  border: 10px rgb(109, 214, 109) double;
+}
+
+ol,
+ul {
+  border: 2px green dotted;
+  width: 350px;
+  padding: 20px;
+}
+
+ol li,
+ul li {
+  border-bottom: 1px green solid;
+}

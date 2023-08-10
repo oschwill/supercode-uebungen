@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 0.5rem;
+  background-color: aqua;
+  width: 200px;
+  padding: 25px;
+  border: 25px #000 solid;
+  margin: 25px auto;
+}
