@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+*::selection {
+  color: blanchedalmond;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+h3,
+ul,
+section,
+p {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+/*
+#00bfff = blue
+#32cd32 = lightgreen
+#c71585 = pink
+#00ced1 = aqua
+#483d8b = darkblue
+#2e8b57 = darkgreen
+
+*/
+
+h3::first-letter {
+  color: #2e8b57;
+  font-size: 3rem;
+}
+
+ul li {
+  margin-left: 35px;
+  font-weight: bold;
+}
+
+ul li:first-child::first-letter {
+  color: #00ced1;
+  text-decoration: overline;
+  text-decoration-thickness: 5px;
+  font-size: 3rem;
+}
+
+ul li:nth-child(2)::first-letter {
+  color: #c71585;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  font-size: 3rem;
+}
+
+ul li:last-child {
+  text-decoration: line-through;
+}
+
+ul li:last-child::first-letter {
+  color: #32cd32;
+  border-top: 1px solid #000;
+  outline: 10px rgb(0, 0, 0) solid;
+  text-decoration: line-through greenyellow;
+  text-decoration-thickness: 5px;
+  font-size: 3rem;
+}
+
+section p {
+  font-weight: bold;
+}
+
+/* section p::first-letter {
+  color: red;
+  font-size: 2rem;
+} */
+
+/* before */
+section p:nth-child(2)::before {
+  content: "I'";
+  font-size: 2rem;
+  color: red;
+}
+section p:nth-child(3)::before {
+  content: 'A';
+  font-size: 1.5rem;
+  color: red;
+}
+section p:nth-child(4)::before {
+  content: 'F';
+  font-size: 2rem;
+  color: red;
+}
+section p:nth-child(5)::before {
+  content: "I'";
+  font-size: 1.5rem;
+  color: red;
+}
+section p:nth-child(6)::before {
+  content: 'Y';
+  font-size: 2rem;
+  color: red;
+}
+
+section p::first-line {
+  color: #2e8b57;
+}
+
+section p:first-child {
+  color: rgb(129, 123, 123);
+  text-indent: 6%;
+}
+
+section p:first-child::first-line,
+section p:first-child::first-letter {
+  color: rgb(129, 123, 123);
+}
+
+section p:first-child::first-line {
+  font-size: 2rem;
+}
+
+section p:nth-child(2),
+section p:nth-child(4),
+section p:nth-child(6) {
+  font-size: 1.5rem;
+}
+
+section p:not(:first-child):hover::first-line {
+  color: #00bfff;
+}

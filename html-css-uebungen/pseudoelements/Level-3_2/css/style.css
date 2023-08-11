@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+ul li {
+  margin-left: 35px;
+  width: 300px;
+}
+
+ul li:nth-child(even) {
+  text-decoration: underline;
+}
+
+ul li:nth-child(even) {
+  list-style-type: square;
+}
+
+ul li:nth-child(3),
+ul li:nth-child(6),
+ul li:nth-child(9),
+ul li:nth-child(12),
+ul li:nth-child(15),
+ul li:nth-child(18),
+ul li:nth-child(21),
+ul li:nth-child(24),
+ul li:nth-child(27),
+ul li:nth-child(30) {
+  font-family: Montserrat;
+  color: #311b92;
+}
+
+ul li:nth-child(5),
+ul li:nth-child(10),
+ul li:nth-child(15),
+ul li:nth-child(20),
+ul li:nth-child(25),
+ul li:nth-child(30) {
+  background-color: #fff176;
+}
+
+ul li:nth-child(7),
+ul li:nth-child(14),
+ul li:nth-child(21),
+ul li:nth-child(28) {
+  font-size: 1.6em;
+}
+
+ul li:first-child {
+  color: #e53935;
+}
+
+ul li:nth-child(4),
+ul li:nth-child(8),
+ul li:nth-child(12),
+ul li:nth-child(16),
+ul li:nth-child(20),
+ul li:nth-child(24),
+ul li:nth-child(28) {
+  letter-spacing: 6px;
+}
+
+ul li:nth-child(13),
+ul li:nth-child(26) {
+  background-color: #ff8a80;
+}

@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  color: #333;
+}
+
+h2,
+p {
+  margin-bottom: 15px;
+}
+
+#layout {
+  background-color: #f1f1f1;
+  width: 500px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+button {
+  background-color: lightblue;
+  padding: 5px 15px;
+  border: 1px solid green;
+}

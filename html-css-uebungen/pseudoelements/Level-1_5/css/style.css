@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.testimonial {
+  width: 400px;
+  height: 120px;
+  margin: 100px;
+  position: relative;
+}
+
+.quote {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.quote::first-letter {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Icons */
+.quote::before {
+  display: inline-block;
+  content: '';
+  background: url('../assets/img/157247.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -12px;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+}
+.quote::after {
+  display: inline-block;
+  content: '';
+  background: url('../assets/img/157247.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  transform: rotate(180deg);
+  top: 100px;
+  right: -50px;
+  width: 40px;
+  height: 40px;
+}
+
+.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-modifier {
+  border-bottom: 1px solid #000;
+}
+
+.text-modifier--bag:hover {
+  border: 2px solid #000;
+}
+.text-modifier--bike:hover {
+  background-color: #000;
+  color: #fff;
+}

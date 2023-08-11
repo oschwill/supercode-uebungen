@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+p {
+  border: 1px solid #ffcc00;
+}
+
+p::before {
+  content: 'Info';
+  font-weight: bold;
+  background-color: #ffcc00;
+}
+
+p::after {
+  content: '\2665';
+  color: #ffcc00;
+}
