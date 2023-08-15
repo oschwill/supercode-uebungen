@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+  color: white;
+}
+
+.background-image {
+  background: url('../assets/img/unsplash.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 15%;
+}
+
+.quote p {
+  font-size: 2rem;
+  text-align: center;
+  /* opacity: 0.8%; */
+}
+
+.quote p:first-child {
+  padding: 15px 15px 5px 15px;
+}
+
+.quote {
+  background: rgba(156, 145, 145, 0.5);
+  width: 50vw;
+  height: 150px;
+  margin: 0 auto;
+}
