@@ -56,6 +56,16 @@ header {
   margin: 5% auto;
   text-align: center;
 }
+
+.company-logo:hover {
+  background: linear-gradient(
+    45deg,
+    #48cefa 20%,
+    rgba(39, 39, 240, 0.88) 50%,
+    rgba(255, 0, 255, 0.47) 100%
+  );
+}
+
 .company-logo p {
   padding: 3%;
 }
@@ -75,6 +85,11 @@ header {
 
 .company-navigation p {
   padding: 3% 10%;
+}
+
+.company-navigation p:hover {
+  color: white;
+  text-shadow: 0 0 5px white;
 }
 
 .wrapper {
