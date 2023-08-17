@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('../assets/fonts/Lato-Regular.ttf');
+}
+
+html {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+header nav {
+  height: 60.74px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-item1 {
+  display: flex;
+  width: 15%;
+  gap: 12px;
+  align-items: center;
+  margin-left: 64px;
+}
+
+.nav-item1 img {
+  width: 12px;
+  height: 12px;
+}
+
+.nav-item2 {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item2 ul {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.nav-item2 ul li {
+  padding: 0 10px;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+/*** MAIN ***/
+main {
+  background-color: #d9e8e5;
+  /* justify-content: center; */
+}
+
+main h2 {
+  padding: 80px 50px 0 160px;
+}
+
+.ring-gallery {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ring-gallery > * {
+  position: relative;
+}
+
+.prices {
+  position: absolute;
+  z-index: 100;
+  bottom: 13.62px;
+  right: 13.62px;
+  font-size: 1.6rem;
+}

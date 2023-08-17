@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('../assets/fonts/Raleway-VariableFont_wght.ttf');
+}
+
+html {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+/*** HEADER NAVIGATION ***/
+.header-navigation {
+  min-height: 76px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.logo {
+  color: #666;
+  font-size: 2rem;
+}
+
+nav {
+  height: 76px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1% 0;
+}
+
+nav ul {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a:hover {
+  color: #337ab7;
+}
+
+.logo:hover {
+  color: #333;
+}
+
+/*** HEADER INTRO ***/
+.header-intro {
+  background: url('../assets/img/background.jpeg') no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-intro-content {
+  text-align: center;
+}
+
+.header-intro-content h1 {
+  font-size: 6rem;
+  color: #fff;
+  font-weight: 100;
+  line-height: 64px;
+  margin-bottom: 25px;
+}
+
+.header-intro-content p {
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 24px;
+  margin-bottom: 36px;
+}
+
+.header-intro-content a {
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttons .readmore-button {
+  background-color: #745cf9;
+  border: 1px solid #745cf9;
+}
+
+.buttons .download-button {
+  border: 1px solid #fff;
+}
+
+.buttons .download-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.buttons .readmore-button:hover {
+  background-color: #3c317b;
+  border: 1px solid #3c317b;
+}
+
+main {
+  min-height: 50px;
+}
