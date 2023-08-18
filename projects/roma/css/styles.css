@@ -1,0 +1,260 @@
+/*** GENERAL CSS ***/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* font colors */
+  --font-white: #fff;
+  --font-yellow: #e7bc0e;
+  --font-lightgreen: #6bc1a3;
+  --font-pink: #cb91b6;
+  --font-lightblue: #7eb8e1;
+
+  /* border colors */
+  --border-yellow: #e7bc0e;
+  --border-white: #fff;
+
+  /* background colors */
+  --bg-grey: #333;
+  --bg-black: #000;
+}
+
+@font-face {
+  font-family: Santio;
+  src: url('../assets/fonts/Santio\ regular.ttf');
+}
+
+@font-face {
+  font-family: MrDafoe;
+  src: url('../assets/fonts/MrDafoe-Regular.ttf');
+}
+@font-face {
+  font-family: Inter;
+  src: url('../assets/fonts/Inter-VariableFont_slntwght.ttf');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Santio, Arial, Helvetica, sans-serif;
+}
+
+/*** HEADER ***/
+.head-main-container header {
+  height: 50.21px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.head-main-container header img {
+  width: 20px;
+  height: 20px;
+}
+
+.head-main-container header p {
+  color: var(--font-white);
+  display: inline;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  border-bottom: 1px solid var(--border-yellow);
+  cursor: pointer;
+}
+
+.pad-r {
+  padding-right: 65.83px;
+}
+
+/*** MAIN ***/
+.head-main-container {
+  background: url('../assets/img/cleo-topper.jpg') no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* position: relative; */
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+}
+
+.main-content h1 {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  width: 10%;
+  word-spacing: 99999px;
+  font-size: 6.6rem;
+  color: var(--font-white);
+  margin-left: 131.67px;
+  margin-bottom: 152.75px;
+}
+
+.main-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-headline {
+  display: flex;
+  margin-left: 131.67px;
+  gap: 0 33px;
+  margin-bottom: 213px;
+}
+
+.main-sections .main-headline h2 {
+  font-family: MrDafoe, Arial, Helvetica, sans-serif;
+  color: var(--font-yellow);
+  font-size: 3.2rem;
+}
+.bottom-v {
+  display: inline-block;
+  color: var(--font-yellow);
+  align-self: flex-end;
+  margin-top: 12%;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.main-article1,
+.main-article2,
+.main-article3,
+.main-article4,
+.main-article5 {
+  width: 30%;
+}
+
+.main-article-general {
+  margin-left: 395px;
+  margin-bottom: 135px;
+  display: flex;
+  flex-direction: column;
+  gap: 4.88px 0;
+}
+
+.main-article1 {
+  font-size: 3.52rem;
+  color: var(--font-lightgreen);
+  margin-left: 237px;
+  margin-bottom: 420px;
+}
+
+.main-article2 {
+  color: var(--font-yellow);
+  font-weight: 800;
+}
+
+.article-image {
+  height: 105px;
+  width: 105px;
+}
+
+.main-article2 h2 {
+  font-size: 13.9rem;
+  word-spacing: 99999px;
+}
+
+.main-article2 p,
+.main-article3 p,
+.main-article4 p {
+  font-size: 5.02rem;
+}
+
+.main-article3 {
+  color: var(--font-pink);
+  font-weight: 400;
+}
+
+.main-article3 h2 {
+  font-size: 9.56rem;
+  word-spacing: 99999px;
+}
+
+.main-article4 {
+  color: var(--font-lightgreen);
+  font-weight: 400;
+}
+
+.main-article4 h2 {
+  font-size: 11.1rem;
+}
+
+.main-article5 p {
+  font-size: 3.52rem;
+  color: var(--font-lightblue);
+}
+
+.first-modifier {
+  color: var(--font-white);
+}
+
+.second-modifier {
+  color: var(--font-white);
+  background-color: var(--bg-grey);
+}
+
+/*** FOOTER ***/
+.footer-image {
+  background: url('../assets/img/kid.png') no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-donation {
+  height: 100%;
+  background-color: var(--bg-black);
+  padding-top: 123.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 75px 0;
+}
+
+.footer-donation p {
+  width: 35%;
+  font-size: 4.7rem;
+  font-weight: 800;
+  color: var(--font-white);
+  margin-left: 131.67px;
+}
+
+.footer-donation > a {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: var(--font-white);
+  margin-left: 131.67px;
+  padding: 10px 20px;
+  border: 1px solid var(--border-white);
+  width: 120px;
+  margin-top: -60px;
+  text-align: center;
+}
+
+.footer-donation a:hover {
+  box-shadow: 8px 8px var(--border-white);
+}
+
+.inspired {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--font-white);
+  align-self: center;
+}
+
+.inspired span a {
+  color: var(--font-lightgreen);
+  text-decoration: none;
+}
