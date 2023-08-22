@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+fieldset {
+  padding: 1%;
+}
+
+fieldset > * {
+  margin-top: 1%;
+}
+
+label {
+  display: inline-block;
+}
+
+label:first-of-type {
+  width: 15%;
+}
+
+.language {
+  display: flex;
+}
+
+.language label {
+  align-self: center;
+}
+
+.language span {
+  align-self: flex-end;
+}
+
+.activity > *,
+.gender > * {
+  padding-right: 5px;
+}

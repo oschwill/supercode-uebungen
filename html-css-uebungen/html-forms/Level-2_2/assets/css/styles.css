@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+.input {
+  display: flex;
+  gap: 5px;
+}
+
+fieldset {
+  padding: 10px;
+}
+
+input[type='submit'] {
+  margin-top: 5px;
+}
