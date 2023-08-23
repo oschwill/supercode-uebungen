@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+div {
+  text-align: center;
+  padding: 50px;
+}
+
+.header {
+  background-color: aqua;
+}
+.article-1 {
+  background-color: rgb(251, 255, 0);
+}
+.article-2 {
+  background-color: rgb(73, 192, 26);
+}
+.article-3 {
+  background-color: rgb(255, 0, 13);
+}
+.article-4 {
+  background-color: rgb(174, 195, 103);
+}
+.aside {
+  background-color: rgb(44, 6, 215);
+}
+.footer {
+  background-color: rgb(163, 161, 172);
+}
+
+main {
+  width: 99%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1% auto;
+}
+
+.header,
+.footer {
+  width: 100%;
+}
+
+.articles {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 0;
+}
+
+.article-1,
+.article-2,
+.article-3,
+.article-4 {
+  width: 49%;
+}
+
+.aside {
+  width: 18.5%;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .header {
+    order: 0;
+  }
+
+  .aside {
+    width: 100%;
+    order: 1;
+  }
+
+  .articles {
+    order: 2;
+    width: 100%;
+  }
+
+  .footer {
+    order: 3;
+  }
+}
+
+@media (max-width: 576px) {
+  .article-1,
+  .article-2,
+  .article-3,
+  .article-4 {
+    width: 100%;
+  }
+}

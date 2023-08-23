@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*** MOBILE FIRST ***/
+main,
+footer,
+.arrows {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+main {
+  flex-direction: column;
+}
+
+footer {
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: lightgray;
+  position: relative;
+}
+
+footer > * {
+  height: 30px;
+}
+
+/* ! Content Side*/
+.content,
+.picture {
+  padding: 20px 25px;
+  width: 100%;
+}
+
+.content span {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.content p {
+  width: 50%;
+  margin-bottom: 60px;
+}
+
+/*! Picture Side */
+.picture {
+  background: url('../imgs/bild.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.text .big {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+/*! Footer Side */
+.icons {
+  padding-left: 25px;
+}
+
+.icons > * {
+  padding-right: 5px;
+}
+
+.motto {
+  padding-right: 25px;
+  text-align: right;
+}
+
+.motto p:first-of-type {
+  font-weight: bold;
+}
+
+.arrows {
+  width: 75px;
+  left: 178px;
+  justify-content: space-around;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.arrows .right-arrow {
+  background-color: #000;
+  color: #fff;
+}
+
+.left-arrow i,
+.right-arrow i {
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+
+  .content,
+  .picture {
+    width: 50%;
+  }
+}
