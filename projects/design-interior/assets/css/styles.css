@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Alegreya_Sans;
+  src: url('../fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: Alegreya_SC;
+  src: url('../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf');
+}
+
+@font-face {
+  font-family: NixieOne;
+  src: url('../fonts/Nixie_One/NixieOne-Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  background: url('../imgs/header/headerfoto.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 30px;
+}
+
+.navigation h1 {
+  color: #fff;
+  font-size: 3.6rem;
+}
+
+.nav div {
+  width: 25px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+.head-front {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 72.5px;
+}
+
+.head-front h2 {
+  font-size: 3.92rem;
+}
+
+.head-front p {
+  padding-top: 14.19px;
+  font-size: 1.68rem;
+  opacity: 0.5;
+}
+
+.works-headline {
+  padding: 22px 15px;
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.works-headline h2 {
+  font-size: 3.6rem;
+}
+
+.works-headline button {
+  font-size: 1.8rem;
+  background-color: #fff;
+  padding: 12px 0;
+  border: 1px solid #3a4f52;
+  width: 80%;
+  align-self: self-end;
+}
