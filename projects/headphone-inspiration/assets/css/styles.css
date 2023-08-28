@@ -43,6 +43,10 @@ aside ul {
   list-style: none;
 }
 
+aside ul li {
+  position: relative;
+}
+
 aside ul li a {
   text-decoration: none;
   color: var(--fontColor-grey);
@@ -56,8 +60,23 @@ aside ul li:nth-child(even) {
   margin-left: 8px;
 }
 
-label {
-  cursor: pointer;
+aside ul li span {
+  font-size: 3rem;
+  color: var(--fontColor-grey);
+  font-weight: 100;
+  width: 20px;
+  height: 20px;
+}
+
+.clicked {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 7px;
+  left: -6px;
+  height: 28px;
+  width: 28px;
 }
 
 input[type='radio'] {
@@ -334,4 +353,30 @@ form input[type='submit'] {
   text-align: center;
   background-color: var(--button-background-color);
   color: var(--fontColor-grey);
+}
+
+@media (max-width: 876px) {
+  .header-section,
+  .page-3-section {
+    flex-direction: column;
+  }
+
+  .page-section {
+    grid-template-columns: 1fr;
+  }
+
+  header .introduction-text {
+    margin: 150px;
+    width: 50%;
+  }
+
+  aside ul li a {
+    font-size: 1rem;
+  }
+
+  .header-section-image,
+  .header-section-text,
+  .page-3-section-text {
+    width: 75%;
+  }
 }
