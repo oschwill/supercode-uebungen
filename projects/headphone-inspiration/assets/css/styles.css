@@ -237,6 +237,7 @@ header .introduction-text {
   padding: 10px 25px;
   background-color: var(--button-background-color);
   border: none;
+  cursor: pointer;
 }
 
 .page-video,
