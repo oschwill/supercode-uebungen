@@ -1,0 +1,336 @@
+/*** GENERAL CSS ***/
+
+@font-face {
+  font-family: WorkSans;
+  src: url('../fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ! bg colors */
+  --html-background-color: #2e2e2e;
+  --button-background-color: #ebccc2;
+  /* ! font colors */
+  --fontColor-brown-light: #ebccc2;
+  --fontColor-brown-dark: #867772;
+  --fontColor-grey: #737373;
+}
+
+html {
+  font-family: WorkSans, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  background-color: var(--html-background-color);
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;
+}
+/*** ASIDE CSS ***/
+aside {
+  position: fixed;
+  left: 14.83px;
+  top: 182.5px;
+  z-index: 1000;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: var(--fontColor-grey);
+  font-size: 1.6rem;
+  word-spacing: 25px;
+  padding-left: 20px;
+}
+aside ul li:nth-child(even) {
+  height: 40px;
+  border-left: 1px solid var(--fontColor-grey);
+  margin-left: 8px;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  height: 15px;
+  width: 15px;
+  border: 1px solid var(--fontColor-grey);
+  border-radius: 100%;
+}
+input[type='radio']:checked {
+  /* background-color: aqua; */
+  border: 1px solid #fff;
+}
+
+/*** HEADER CSS  ***/
+header,
+main {
+  padding: 38.55px 62.83px;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  margin: 100px 0;
+}
+
+.logo {
+  position: fixed;
+  left: 39.5px;
+  top: 29px;
+  z-index: 1000;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: var(--fontColor-brown-dark);
+  padding-left: 26.12px;
+}
+
+.navigation ul li:first-of-type > a {
+  padding-left: 45.23px;
+}
+
+/* ! hover navigation */
+.navigation ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+  transition: 1.5s ease;
+}
+
+header .introduction-text {
+  width: 25%;
+  margin-top: 84.11px;
+  font-size: 2.4rem;
+  color: var(--fontColor-brown-light);
+  margin-left: 434.5px;
+}
+
+.header-background {
+  background: url('../imgs/headerbackground.jpeg') no-repeat;
+  background-size: cover;
+  height: 1422px;
+  width: 100%;
+  background-position: center;
+  margin-top: 92.62px;
+}
+
+.header-section {
+  width: 75%;
+  margin: 113.25px auto;
+}
+
+.header-section,
+.page-3-section {
+  display: flex;
+  justify-content: center;
+  gap: 65.83px;
+}
+
+.header-section-image,
+.header-section-text,
+.page-3-section-text {
+  width: 50%;
+  align-self: center;
+}
+
+.header-section-text h2,
+.page-3-section-text h2 {
+  color: var(--fontColor-brown-light);
+  font-size: 2.4rem;
+  font-weight: 100;
+}
+
+.header-section-text p {
+  font-size: 1.6rem;
+  color: var(--fontColor-grey);
+  padding-top: 20px;
+}
+
+/*** MAIN CSS ***/
+.page-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.page-two-bg {
+  background: url('../imgs/second-page_background.jpeg') no-repeat;
+}
+
+.page-four-bg {
+  background: url('../imgs/fourth-page_background.jpeg') no-repeat;
+}
+
+.page-five-bg {
+  background: url('../imgs/fifth-page1_background.jpeg') no-repeat;
+}
+
+.page-background {
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+}
+
+.page-text {
+  padding-left: 25px;
+  align-self: center;
+}
+
+.page-text h2 {
+  color: var(--fontColor-brown-light);
+  font-size: 4.8rem;
+  font-weight: 100;
+  padding-bottom: 88.99px;
+}
+
+.page-text p {
+  font-size: 1.6rem;
+  color: var(--fontColor-grey);
+}
+
+.page-text p:not(:nth-child(1)) {
+  padding-bottom: 21.1px;
+}
+
+.page-section:last-of-type > .page-text {
+  text-align: center;
+}
+
+.page-five-image {
+  width: 75%;
+  height: 75%;
+}
+
+.page-section .page-text .page-five-h2 {
+  font-size: 2.4rem;
+  padding-bottom: 18.22px;
+}
+
+.page-text button {
+  padding: 10px 25px;
+  background-color: var(--button-background-color);
+  border: none;
+}
+
+.page-video,
+.page-3-section {
+  width: 75%;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.page-3-section-text > * {
+  padding-bottom: 16px;
+}
+
+.page-3-section-text p:first-of-type {
+  color: var(--button-background-color);
+  font-size: 1.92rem;
+}
+
+.page-3-section-text p:last-of-type {
+  color: var(--fontColor-grey);
+  font-size: 1.6rem;
+}
+
+.page-video {
+  margin-bottom: 106px;
+}
+
+.page-video article p:first-of-type {
+  color: var(--fontColor-brown-light);
+  font-size: 1.92rem;
+  margin-bottom: 14.15px;
+}
+
+.page-video article h2 {
+  color: var(--fontColor-brown-light);
+  font-size: 4rem;
+  margin-bottom: 28.31px;
+}
+
+.page-video article button {
+  background: none;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: var(--fontColor-grey);
+  margin-bottom: 15.76px;
+}
+
+.page-video article p:last-of-type {
+  font-size: 1.6rem;
+  color: var(--fontColor-grey);
+}
+
+/*** SUBSCRIBE SITE CSS ***/
+.formular {
+  background: url('../imgs/fifth-page1_background.jpeg') no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+
+form {
+  width: 70%;
+  margin: 100px auto;
+  padding: 25px 50px;
+  background-color: rgba(50, 46, 46, 0.5);
+  border: 1px solid var(--fontColor-brown-light);
+}
+
+form h2 {
+  text-align: center;
+  color: var(--fontColor-brown-light);
+  font-size: 2.5rem;
+}
+
+form > *:not(h2) {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 1.6rem;
+  color: var(--fontColor-grey);
+}
+
+form input,
+form textarea {
+  padding: 5px;
+}
+
+form input[type='submit'] {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--button-background-color);
+  color: var(--fontColor-grey);
+}
