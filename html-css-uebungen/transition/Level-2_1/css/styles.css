@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.picture {
+  position: relative;
+  width: 50%;
+  margin: 5% auto;
+}
+
+.picture img {
+  width: 400px;
+  height: 400px;
+}
+
+.effect {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  background-color: rgba(83, 78, 78, 0.4);
+  bottom: 4px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  transition: height 0.5s ease;
+}
+
+.effect p {
+  margin: 50% auto;
+}
+
+.picture:hover > .effect {
+  height: 400px;
+}

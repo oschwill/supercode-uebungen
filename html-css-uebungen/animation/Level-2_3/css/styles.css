@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picture {
+  width: 30%;
+  height: 30%;
+  box-shadow: 0 0 60px #fff;
+}
+
+.picture img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.picture:hover {
+  animation-name: boxSchatten;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes boxSchatten {
+  0% {
+    box-shadow: 0 0 60px #0a56c0;
+  }
+  25% {
+    box-shadow: -20px -20px 60px #0a56c0;
+  }
+  50% {
+    box-shadow: 0 0 60px #fff;
+  }
+  75% {
+    box-shadow: 0 0 60px #0a56c0;
+  }
+  100% {
+    box-shadow: 20px 20px 60px #0a56c0;
+  }
+}

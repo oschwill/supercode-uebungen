@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: lightgray;
+  height: 400px;
+}
+
+.box {
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  /* transform: translateX(600px); */
+
+  transition: width 1s ease;
+}
+
+.box:hover {
+  width: 300px;
+}

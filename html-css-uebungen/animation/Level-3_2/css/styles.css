@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+  background-color: #000;
+}
+
+div {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+.bullet {
+  animation-name: loading-effect;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.bullet-1 {
+  background-color: green;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+}
+
+.bullet-2 {
+  background-color: purple;
+  animation-delay: 1.1s;
+  animation-timing-function: ease-in;
+}
+
+.bullet-3 {
+  background-color: yellow;
+  animation-delay: 1.2s;
+  animation-timing-function: ease-in;
+}
+
+.bullet-4 {
+  background-color: red;
+  animation-delay: 1.3s;
+  animation-timing-function: ease-in;
+}
+
+.bullet-5 {
+  background-color: darkorchid;
+  animation-delay: 1.4s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes loading-effect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

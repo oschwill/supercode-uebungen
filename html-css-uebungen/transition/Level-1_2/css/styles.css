@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  background-color: lightgray;
+  height: 300px;
+  position: relative;
+}
+
+.red-box {
+  position: absolute;
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  left: 0;
+  transition: left 2s ease;
+}
+.green-box {
+  position: absolute;
+  background-color: green;
+  width: 150px;
+  height: 150px;
+  top: 150px;
+  left: 0;
+  transition: left 2s ease 1s;
+}
+
+section:hover > * {
+  left: 90%;
+}

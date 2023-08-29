@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  margin: 10vh 20vw;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(185, 88, 88);
+  border-radius: 5%;
+  transition: transform 0.5s ease;
+}
+
+.box:hover {
+  /* transform-origin: top left; */
+  transform: scale(1.2) rotateZ(90deg) translateX(100px);
+}
