@@ -35,7 +35,7 @@ main {
     box-shadow: 0 0 60px #0a56c0;
   }
   25% {
-    box-shadow: -20px -20px 60px #0a56c0;
+    box-shadow: -20px -20px 60px #0a56c0, 20px 20px 60px red;
   }
   50% {
     box-shadow: 0 0 60px #fff;
@@ -44,6 +44,6 @@ main {
     box-shadow: 0 0 60px #0a56c0;
   }
   100% {
-    box-shadow: 20px 20px 60px #0a56c0;
+    box-shadow: -20px -20px 60px red, 20px 20px 60px #0a56c0;
   }
 }
