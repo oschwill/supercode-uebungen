@@ -1,0 +1,363 @@
+/*** GENERAL CSS ***/
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: RobotoSemiBold;
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+/* ! Property für den Hover Transition Effect funzt nicht auf den Firefox da experimental*/
+@property --hover-color-first {
+  syntax: '<color>';
+  initial-value: #ff3571;
+  inherits: false;
+}
+@property --hover-color-second {
+  syntax: '<color>';
+  initial-value: #ff3571;
+  inherits: false;
+}
+@property --hover-color-third {
+  syntax: '<color>';
+  initial-value: #ff3571;
+  inherits: false;
+}
+
+:root {
+  /* ! Font colors */
+  --font-color-pink: #ff3571;
+  --font-color-grey: #dddddd;
+  /* ! BG Colors */
+  --bg-color-pink: #ff3571;
+  --bg-color-lightgrey: lightgray;
+
+  /* ! Hover effect Colors */
+  /* --hover-color-first: #ff3571; */
+  /* --hover-color-second: #ff3571;
+  --hover-color-third: #ff3571; */
+}
+
+/*** HEADER CSS  ***/
+header {
+  height: 765px;
+  margin-bottom: 89.15px;
+}
+
+.header-section {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.header-leftside {
+  margin: 38px 0 0 91px;
+}
+
+.header-leftside .logo {
+  margin-bottom: 350px;
+}
+
+.header-leftside .logo h1 {
+  font-size: 2.4rem;
+}
+
+.header-leftside .logo p {
+  font-size: 1.2rem;
+}
+
+.header-leftside .header-text {
+  margin-left: 53px;
+}
+
+.header-leftside .header-text h2 {
+  font-size: 5.4rem;
+  line-height: 64.8px;
+  margin-bottom: 19.8px;
+}
+
+.header-leftside .header-text p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 21.9px;
+  margin-bottom: 88.9px;
+}
+
+.header-leftside .header-text a {
+  font-size: 1.4rem;
+  line-height: 16.41px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--font-color-pink);
+}
+
+.header-rightside {
+  background: url('../imgs/ilustracion1.png') no-repeat;
+  background-size: cover;
+  height: 765px;
+  background-position: initial;
+}
+
+.header-rightside img {
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 125px;
+  animation-name: astronaut;
+  animation-duration: 1.5s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+
+/*** MAIN CSS ***/
+/* ! Gallery Section */
+main .image-gallery img {
+  width: 100%;
+  margin-bottom: 288.53px;
+}
+
+/* ! Quick Tip Section */
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .quick-tip {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 107.18px;
+  margin-bottom: 193px;
+}
+
+main .quick-tip article {
+  display: flex;
+  justify-content: space-between;
+  gap: 176.35px;
+  position: relative;
+}
+
+main .quick-tip article p:first-of-type {
+  font-size: 3.8rem;
+  width: 100%;
+}
+
+main .quick-tip article p:last-of-type {
+  font-size: 1.8rem;
+  line-height: 36px;
+}
+
+main .quick-tip article img {
+  height: 50px;
+  width: 50px;
+}
+
+main .quick-tip article h2 {
+  font-size: 3.8rem;
+  width: 75%;
+  margin-left: 51px;
+}
+
+/* ! Idea Section */
+main .quick-ideas {
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 107px 250px;
+  margin-bottom: 151px;
+}
+
+main .quick-ideas article img {
+  height: 30px;
+  width: 30px;
+}
+
+.first-idea,
+.second-idea,
+.third-idea,
+.fourth-idea {
+  display: flex;
+  gap: 24.6px;
+  align-items: baseline;
+}
+
+main .quick-ideas article div > * {
+  padding-bottom: 10px;
+}
+
+main .quick-ideas article div h2 {
+  font-size: 1.872rem;
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+main .quick-ideas article div p {
+  font-size: 1.4rem;
+  line-height: 28px;
+}
+
+.idea-start {
+  grid-column: 1/3;
+  text-align: center;
+  align-content: center;
+}
+
+.idea-start h2 {
+  font-family: RobotoSemiBold, Arial, Helvetica, sans-serif;
+  font-size: 2.8rem;
+  line-height: 33.6px;
+  padding-bottom: 24.63px;
+}
+
+.idea-start p {
+  width: 35%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  line-height: 18.2px;
+}
+
+/* ! Idea Steps Section */
+.idea-steps {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  margin-bottom: 200px;
+}
+
+.idea-steps article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 150px;
+}
+
+.idea-steps article .step-image {
+  width: 100%;
+}
+
+.idea-steps article .idea-step-text h2 {
+  font-family: RobotoBold;
+  color: var(--font-color-grey);
+  font-size: 5.2rem;
+  padding-bottom: 43.16px;
+}
+
+.idea-steps article .idea-step-text img {
+  margin-bottom: 22px;
+}
+
+.idea-steps article .idea-step-text p:first-of-type {
+  font-family: RobotoBold;
+  font-size: 1.872rem;
+  padding-bottom: 18px;
+}
+
+.idea-steps article .idea-step-text p:last-of-type {
+  font-size: 1.4rem;
+  line-height: 28px;
+}
+
+/*** FOOTER CSS ***/
+.footer-section {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section .created-by {
+  align-self: flex-start;
+}
+
+.formular {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.formular h2 {
+  font-family: RobotoSemiBold, Arial, Helvetica, sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 24.83px;
+}
+
+.formular p:first-of-type {
+  font-size: 1.4rem;
+  line-height: 18.2px;
+  width: 85%;
+  text-align: center;
+}
+
+.formular input[type='email'] {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  /* border: none; */
+  border: 1px solid var(--bg-color-lightgrey);
+  box-shadow: 0 0 10px var(--bg-color-lightgrey);
+  margin-bottom: 30px;
+}
+
+.formular input[type='submit'] {
+  width: 40%;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  /* background: var(--bg-color-pink); */
+  background: linear-gradient(
+    90deg,
+    var(--hover-color-first) 0%,
+    var(--hover-color-second) 100%,
+    var(--hover-color-third) 100%
+  );
+  transition: --hover-color-first 0.8s, --hover-color-second 0.8s, --hover-color-third 0.8s;
+}
+
+.formular input[type='submit']:hover {
+  --hover-color-first: rgba(249, 0, 228, 1);
+  --hover-color-second: rgba(9, 9, 121, 1);
+  --hover-color-third: rgba(34, 0, 255, 1);
+}
+
+.created-by {
+  font-size: 1.8rem;
+}
+
+.heart {
+  height: 15px;
+  width: 20px;
+}
+
+/* ! Keyframes */
+@keyframes astronaut {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
