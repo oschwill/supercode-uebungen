@@ -122,20 +122,6 @@ header nav {
   justify-content: center;
 }
 
-/* .container .ad-first {
-  grid-column: 3/4;
-  grid-row: 2/4;
-}
-.container .ad-second {
-  grid-column: 3/4;
-  grid-row: 4/5;
-}
-
-.container .ad-third {
-  grid-column: 3/4;
-  grid-row: 5/6;
-} */
-
 .advertisement-section article {
   width: 100%;
   text-align: center;
@@ -184,4 +170,26 @@ header nav {
 .advertisement-section article img {
   width: 100%;
   height: 100%;
+}
+
+/*** MOBILE IPAD ***/
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    margin: 30px 0;
+  }
+
+  .container section {
+    margin: 30px 0;
+  }
+
+  .container .headline-section article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .advertisement-section {
+    border-left: none;
+    border-right: none;
+  }
 }
