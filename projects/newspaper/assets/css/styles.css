@@ -1,0 +1,187 @@
+/*** GENERAL CSS ***/
+@font-face {
+  font-family: 'Cormorant';
+  src: url('../fonts/CormorantGaramond-Regular.ttf');
+}
+@font-face {
+  font-family: 'CormorantItalic';
+  src: url('../fonts/CormorantGaramond-Italic.ttf');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CormorantBold';
+  src: url('../fonts/CormorantGaramond-Bold.ttf');
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-color-primary: #333;
+  --font-color-secondary: #737b80;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Cormorant, Arial, Helvetica, sans-serif;
+  color: var(--font-color-primary);
+}
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* header,
+main {
+  width: 98%;
+} */
+/*** HEADER CSS ***/
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: CormorantBold, Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+header nav {
+  display: flex;
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+  padding: 10px;
+  font-size: 1.6rem;
+  justify-content: space-around;
+}
+
+/*** MAIN CSS ***/
+.container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 20px;
+}
+
+/* ! ROW ONE HEADLINE SECTION */
+.container .headline-section {
+  grid-column: 1 / -1;
+}
+
+.container .headline-section article {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+}
+
+.headline-section article h2 {
+  font-family: CormorantBold, Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.headline-section article p {
+  font-family: CormorantBold, Arial, Helvetica, sans-serif;
+  font-size: 1.872rem;
+  text-align: center;
+}
+
+/* ! NEWS SECTIONS */
+.news-section {
+  display: flex;
+  gap: 10px;
+}
+
+.news-section article {
+  width: 50%;
+  align-self: baseline;
+}
+
+.news-section article h2 {
+  font-family: CormorantBold;
+  font-size: 2.4rem;
+}
+
+.news-section article p {
+  font-size: 1.6rem;
+}
+
+/* ! ADVERTISEMENT SECTIONS */
+.advertisement-section {
+  border: 5px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .container .ad-first {
+  grid-column: 3/4;
+  grid-row: 2/4;
+}
+.container .ad-second {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+
+.container .ad-third {
+  grid-column: 3/4;
+  grid-row: 5/6;
+} */
+
+.advertisement-section article {
+  width: 100%;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.advertisement-section .big-headline {
+  font-family: CormorantBold, Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+}
+
+.advertisement-section .knifes h2 {
+  font-family: CormorantBold, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+}
+
+.advertisement-section .knifes p:first-of-type {
+  font-size: 1.6rem;
+}
+
+.advertisement-section .knifes p:last-of-type {
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--font-color-secondary);
+  border-bottom: 3px solid var(--font-color-secondary);
+  padding-bottom: 5px;
+}
+
+/*** IMAGE STYLES ***/
+.container .image-section {
+  grid-column: 2/3;
+  grid-row: 2/5;
+}
+
+.image-section article img {
+  height: 100%;
+  width: 100%;
+}
+
+.image-section article p {
+  font-family: CormorantItalic, Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+/* ! Ikea Bild verkleinern */
+.advertisement-section article img {
+  width: 100%;
+  height: 100%;
+}
