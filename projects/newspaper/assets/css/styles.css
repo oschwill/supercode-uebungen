@@ -67,12 +67,26 @@ header nav {
 .container {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 50px 12% 15% 9% 10% 15% 10%;
   gap: 20px;
 }
 
 /* ! ROW ONE HEADLINE SECTION */
 .container .headline-section {
   grid-column: 1 / -1;
+}
+
+.ad-first {
+  grid-column: 3/4;
+  grid-row: 2/4;
+}
+.ad-second {
+  grid-column: 3/4;
+  grid-row: 4/6;
+}
+.ad-third {
+  grid-column: 3/4;
+  grid-row: 6/8;
 }
 
 .container .headline-section article {
@@ -85,6 +99,7 @@ header nav {
   font-family: CormorantBold, Arial, Helvetica, sans-serif;
   font-size: 3.5rem;
   text-align: center;
+  z-index: 100;
 }
 
 .headline-section article p {
@@ -97,6 +112,19 @@ header nav {
 .news-section {
   display: flex;
   gap: 10px;
+}
+
+.news-first {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.news-second {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+.news-third {
+  grid-column: 1/2;
+  grid-row: 5/7;
 }
 
 .news-section article {
