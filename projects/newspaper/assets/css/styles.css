@@ -31,17 +31,6 @@ html {
   color: var(--font-color-primary);
 }
 
-/* body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* header,
-main {
-  width: 98%;
-} */
 /*** HEADER CSS ***/
 header {
   margin-bottom: 20px;
