@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+
+body {
+  background: url('https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1298366/trunk-based-development-git-flow-2e99b359908d4b2793dd64970b1d402c.png')
+    no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 25px;
+  text-decoration: underline;
+}
+
+header {
+  position: relative;
+}
+
+.navigation {
+  position: fixed;
+  display: flex;
+  gap: 10px;
+  top: 0;
+  right: 10px;
+  z-index: 100;
+}
+
+.navigation a {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #000;
+  background-color: blanchedalmond;
+  font-size: 1rem;
+  color: #000;
+  font-weight: 800;
+}
+
+.navigation a:hover {
+  background-color: rgb(148, 112, 57);
+}
+
+.git {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-head {
+  height: 30px;
+  background-color: bisque;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.5rem;
+}
+
+div p {
+  border: 1px solid #000;
+  padding: 5px;
+  align-self: top;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+div p:last-of-type {
+  text-align: center;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.alert {
+  color: red;
+  font-weight: bold;
+}

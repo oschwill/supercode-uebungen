@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Git</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+      <a href="#git-user">GIT USER</a>
+      <a href="#repository">REPOSITORY</a>
+      <a href="#sync">ÄNDERUNGEN SYNC</a>
+      <a href="#branches">BRANCHES</a>
+      <a href="#log-history">LOG/HISTORY</a>
+    </nav>
+  </header>
+  <main>
+    <!-- GIT USER -->
+    <h1 id="git-user">GIT USER</h1>
+    <section class="git">
+      <div class="table-head">
+        <p>GIT BEFEHL</p>
+        <p>BESCHREIBUNG</p>
+        <p>ILLUSTRATION</p>
+      </div>
+      <div>
+        <p>git config --global user.name "[name]"</p>
+        <p>Setzt den Benutzernamen, den du an deine Commit-Transaktionen hängen willst
+        </p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git config --global user.email "[email address]"</p>
+        <p>Setzt die Emailadresse, die du an deine Commit-Transaktionen hängen willst
+        </p>
+        <p>-</p>
+      </div>
+    </section>
+    <!-- REPOSITORY -->
+    <h1 id="repository">REPOSITORY</h1>
+    <section class="git">
+      <div class="table-head">
+        <p>GIT BEFEHL</p>
+        <p>BESCHREIBUNG</p>
+        <p>ILLUSTRATION</p>
+      </div>
+      <div>
+        <p>git init [project-name]</p>
+        <p>erstellt ein lokales Repository</p>
+        <p><img src="https://static.javatpoint.com/tutorial/git/images/git-init.png" alt=""></p>
+      </div>
+      <div>
+        <p>git clone [url]</p>
+        <p>Hiermit klonen wir ein Projekt aus einem entfernten Repository einschließlich der gesamten Versionshistorie
+        </p>
+        <p>-</p>
+      </div>
+    </section>
+    <!-- ÄNDERUNGEN -->
+    <h1 id="sync">ÄNDERUNGEN SYNCHRONISIEREN</h1>
+    <section class="git">
+      <div class="table-head">
+        <p>GIT BEFEHL</p>
+        <p>BESCHREIBUNG</p>
+        <p>ILLUSTRATION</p>
+      </div>
+      <div>
+        <p>git add [file]</p>
+        <p>Indiziert den derzeitigen Stand der Datei für die Versionierung / mit [git add .] indiziert man alle
+          geänderten oder neu erstellten Dateien</p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git reset [file]</p>
+        <p>Nimmt die Datei vom Index, erhält jedoch ihren Inhalt</p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git commit -m"[message]"</p>
+        <p>erstellt eine Beschreibung für die getrackte neue Version und nimmt diese in die Versionshistory auf <span
+            class="alert">(Die Message sollte die vorgenommene Änderung im Code beinhalten!!)</span></p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git fetch [remote]</p>
+        <p>Registriert ein externes Repository und holt sich die Repository History</p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git push [remote] [branch]</p>
+        <p>pusht den angegebenen Branch in das externe Repository
+        </p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git pull</p>
+        <p>pullt die History vom externen Repository in unsere lokales Repository
+        </p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git merge [remote]/[branch]</p>
+        <p>Hiermit intergrieren wir die angegebene branch in unserem branch in dem wir uns befinden
+        </p>
+        <p><img src="https://www.nobledesktop.com/image/gitresources/git-branches-merge.png" alt=""></p>
+      </div>
+      <div>
+        <p>git rm [file]</p>
+        <p>Löscht die Datei aus dem Arbeitsverzeichnis und wird im Index zur Löschung markiert, dadurch wird die Datei
+          beim
+          nächsten commit aus der Versionskontrolle gelöscht
+        </p>
+        <p>-</p>
+      </div>
+    </section>
+    <!-- BRANCHES -->
+    <h1 id="branches">BRANCHES</h1>
+    <section class="git">
+      <div class="table-head">
+        <p>GIT BEFEHL</p>
+        <p>BESCHREIBUNG</p>
+        <p>ILLUSTRATION</p>
+      </div>
+      <div>
+        <p>git branch [branch-name]</p>
+        <p>erzeugt einen neuen Branch</p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git branch</p>
+        <p>Listet alle lokalen Branches auf. Das * zeigt an in welchem Branch man sich befindet
+        </p>
+        <p><img src="./imgs/git_branch.png" alt="branch list"></p>
+      </div>
+      <div>
+        <p>git branch -d [branch-name]</p>
+        <p>Löscht den angegebenen Branch
+        </p>
+        <p><img src="./imgs/delete-branch.png" alt="branch list"></p>
+      </div>
+      <div>
+        <p>git branch -D</p>
+        <p>Löscht unverzüglich den Branch ohne dabei auf die History(Änderungen) zu achten
+        </p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git checkout [branch-name]</p>
+        <p>navigiert in die angegebene Branch
+        </p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git checkout -b [branch-name]</p>
+        <p>Shorthand: erstellt den Branch und navigiert direkt hinein
+        </p>
+        <p>-</p>
+      </div>
+    </section>
+    <!-- LOG / HISTORY -->
+    <h1 id="log-history">LOG / HISTORY</h1>
+    <section class="git">
+      <div class="table-head">
+        <p>GIT BEFEHL</p>
+        <p>BESCHREIBUNG</p>
+        <p>ILLUSTRATION</p>
+      </div>
+      <div>
+        <p>git log</p>
+        <p>Listet die Versionshistore für den aktuellen Branch</p>
+        <p></p>
+      </div>
+      <div>
+        <p>git log --all</p>
+        <p>listet dir alle commits(alle branches) an</p>
+        <p>-</p>
+      </div>
+      <div>
+        <p>git log --oneline</p>
+        <p>Listet dir alle commits in einer Zeile / mit "q" kommt man aus der Ansicht raus</p>
+        <p><img src="./imgs/oneline.png" alt=""></p>
+      </div>
+      <div>
+        <p>git log --graph</p>
+        <p>Listet dir alle commits grafisch an / mit "q" kommt man aus der Ansicht raus</p>
+        <p>-</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
