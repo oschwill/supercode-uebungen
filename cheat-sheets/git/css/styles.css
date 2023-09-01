@@ -12,18 +12,26 @@ html {
 }
 
 body {
-  background: url('https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1298366/trunk-based-development-git-flow-2e99b359908d4b2793dd64970b1d402c.png')
-    no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1298366/trunk-based-development-git-flow-2e99b359908d4b2793dd64970b1d402c.png')
+      no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-clip: content-box;
 }
 
 h1 {
+  width: 30%;
+  padding: 5px 0;
   font-size: 2.5rem;
   text-align: center;
-  margin: 25px;
+  margin: 25px auto;
   text-decoration: underline;
+  background-color: rgb(44, 26, 3);
+  box-shadow: 0 0 40px rgb(169, 106, 25);
+  border-radius: 10%;
+  color: burlywood;
 }
 
 header {
