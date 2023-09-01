@@ -81,10 +81,9 @@ div {
 }
 
 div p {
-  border: 1px solid #000;
+  border: 1px solid #49480c;
   padding: 5px;
-  align-self: top;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 div p:last-of-type {
