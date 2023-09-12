@@ -1,0 +1,8 @@
+#gallery {
+  display: flex;
+}
+
+#gallery figure {
+  display: flex;
+  flex-direction: column;
+}
