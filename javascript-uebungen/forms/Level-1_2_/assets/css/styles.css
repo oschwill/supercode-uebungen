@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  width: 200px;
+  border: 1px solid #000;
+  border-radius: 10%;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: white;
+}
+
+form > * {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form > input[type='submit'] {
+  background-color: greenyellow;
+}
+.error {
+  text-align: center;
+  color: red;
+  font-weight: 800;
+}
