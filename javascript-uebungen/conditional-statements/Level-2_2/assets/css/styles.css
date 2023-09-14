@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: 0.5s linear;
+}
+
+.quality_checker {
+  width: 500px;
+  text-align: center;
+}
+
+.quality_checker form {
+  margin: 0 20vw;
+}
+
+.quality_checker form > * {
+  text-align: left;
+  display: block;
+  width: 300px;
+}
+
+p {
+  padding: 5px;
+  font-weight: 800;
+}

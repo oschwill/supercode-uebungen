@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Level-2_2</title>
+</head>
+
+<body>
+  <main>
+    <div class="quality_checker">
+      <form>
+        <label for="air">AQI: <span class="air_quality"></span></label>
+        <input type="range" value="0" min="0" max="150" step="1" id="air" onchange="checkAirQuality()">
+      </form>
+      <p>Level of health concern: <span class="loh_concern"></span></p>
+      <p>Level of health effect: <span class="loh_effect"></span></p>
+    </div>
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
