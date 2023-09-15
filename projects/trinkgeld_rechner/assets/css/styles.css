@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+form {
+  margin: 100px 20vw;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: plum;
+  padding: 5%;
+  border-radius: 10%;
+}
+
+form > * {
+  margin: 5px;
+}
+
+form h1 {
+  text-align: center;
+}
+
+.bill_costs,
+.bill_group {
+  display: flex;
+  gap: 0 10px;
+}
+
+.bill_costs .icon,
+.bill_group .icon {
+  display: inline-block;
+  background-color: aqua;
+  padding: 5px;
+  width: 10%;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  padding-left: 40px;
+}
+
+input[type='number'],
+select {
+  padding: 5px;
+  width: 97%;
+}
+
+input[type='submit'] {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.output p {
+  margin: 10px;
+}
