@@ -13,8 +13,6 @@ const calculateCosts = () => {
   let group = Number(inputGroup.value);
   let service = Number(inputService.value);
 
-  console.log(Number(50.2505).toFixed(2));
-
   removeErrorClasses();
 
   /* VALIDIERUNG BILL*/
