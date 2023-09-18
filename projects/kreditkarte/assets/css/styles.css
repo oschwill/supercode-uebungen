@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.card {
+  background: url('../imgs/credit-card.png') no-repeat;
+  background-size: cover;
+  height: 250px;
+  width: 500px;
+  margin: 100px auto;
+  border-radius: 2%;
+  margin-bottom: -100px;
+  position: relative;
+  z-index: 10;
+}
+
+.card .images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .images img {
+  height: 60px;
+  padding: 10px 20px;
+}
+
+.output {
+  margin: 75px 0;
+}
+
+.output .table,
+.output > p {
+  margin: 8% 20px 0 20px;
+}
+
+.output .table .headline,
+.output .table .headline_output {
+  display: flex;
+  justify-content: space-between;
+}
+
+.output .table .headline_output {
+  font-size: 2rem;
+}
+
+.form {
+  height: 475px;
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 15% 5%;
+  border-radius: 2%;
+  box-shadow: 0 0 15px #625d5d;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px 2px;
+}
+
+input[type='submit'] {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 2%;
+  width: 25%;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.half_inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 20px;
+  margin-bottom: 30px;
+}
+
+.half_inputs label:last-of-type {
+  text-align: right;
+}
+
+.cvv_output {
+  margin-top: 25px;
+}
