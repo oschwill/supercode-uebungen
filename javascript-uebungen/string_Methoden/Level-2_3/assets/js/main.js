@@ -11,7 +11,7 @@ searchButton.addEventListener('click', () => {
 
   if (article.innerText.includes(searchInput.value)) {
     let articleArr = article.innerText.split(' ');
-    let found = articleArr.indexOf(searchInput.value);
+    // let found = articleArr.indexOf(searchInput.value);
     let returnString = articleArr
       .map((val, key) => {
         // unschön
