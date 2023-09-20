@@ -27,6 +27,7 @@ form.addEventListener('submit', (e) => {
   }
 
   let preIndex = 0;
+  // Wir holen uns erstmal alle Treffer Indices
   let indices = getAllIndices(inputString.value, inputChar.value);
 
   switch (separatorVal) {
