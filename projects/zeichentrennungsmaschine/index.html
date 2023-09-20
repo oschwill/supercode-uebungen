@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>ZeichentrennungsmaschinenDingsbumsGeneratorGerät</title>
+</head>
+
+<body>
+
+  <main>
+    <form class="form">
+      <label for="input_string">Zu trennende Zeichenkette</label>
+      <input type="text" id="input_string">
+      <label for="input_char">Woran trennen?</label>
+      <div>
+        <input type="text" id="input_char">
+        <input type="radio" name="separator" id="pre" value="pre">
+        <label for="pre">Davor</label>
+        <input type="radio" name="separator" id="post" value="post">
+        <label for="post">Danach</label>
+      </div>
+      <input type="submit" value="Klick mich">
+      <div class="output">
+      </div>
+    </form>
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
