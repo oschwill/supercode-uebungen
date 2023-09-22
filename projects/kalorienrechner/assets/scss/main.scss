@@ -1,0 +1,53 @@
+.form {
+  @extend .form_style;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  label {
+    font-size: 1.6rem;
+  }
+
+  input {
+    padding: 5px;
+    margin-bottom: 10px;
+
+    &[type='number'] {
+      width: 75%;
+    }
+
+    &[type='submit'] {
+      width: 20%;
+      background-color: $button-color-orange;
+      color: $font-color-white;
+    }
+  }
+
+  .gender {
+    margin-bottom: 10px;
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    label {
+      margin-right: 25px;
+    }
+  }
+
+  .output {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin-left: -26px;
+    margin-right: -26px;
+
+    div {
+      padding: 5px;
+      font-size: 1.6rem;
+      border: 1px solid $font-color-white;
+      font-weight: 800;
+    }
+  }
+}

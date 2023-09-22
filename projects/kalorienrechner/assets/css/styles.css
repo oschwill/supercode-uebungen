@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: rgb(80, 80, 120);
+}
+
+.form_style, .form {
+  width: 60%;
+  background-color: rgb(148, 148, 171);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.form h1 {
+  font-size: 2.5rem;
+}
+.form label {
+  font-size: 1.6rem;
+}
+.form input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.form input[type=number] {
+  width: 75%;
+}
+.form input[type=submit] {
+  width: 20%;
+  background-color: rgb(123, 87, 22);
+  color: white;
+}
+.form .gender {
+  margin-bottom: 10px;
+}
+.form .gender h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.form .gender label {
+  margin-right: 25px;
+}
+.form .output {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin-left: -26px;
+  margin-right: -26px;
+}
+.form .output div {
+  padding: 5px;
+  font-size: 1.6rem;
+  border: 1px solid white;
+  font-weight: 800;
+}
+
+/*# sourceMappingURL=styles.css.map */
