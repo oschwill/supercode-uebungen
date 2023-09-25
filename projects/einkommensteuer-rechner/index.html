@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Einkommenssteuer Rechner</title>
+</head>
+
+<body>
+  <main>
+    <form class="form">
+      <h1>Einkommenssteuer-Berechnung</h1>
+      <div class="label">
+        <label for="year">Jahr</label>
+      </div>
+      <div class="input">
+        <select name="year" id="year">
+          <!-- <option value="2020">2020</option> -->
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+      </div>
+      <div class="label">
+        <label for="zve">zvE</label>
+      </div>
+      <div class="input">
+        <input type="number" id="zve" name="zve" step="0.01">
+        <span>Euro</span>
+      </div>
+      <div class="label">
+        <label for="type">Einzel oder Zusammen</label>
+      </div>
+      <div class="input">
+        <input type="radio" name="type" value="einzel" checked><span>Einzel</span>
+        <input type="radio" name="type" value="zusammen"><span>Zusammen</span>
+      </div>
+      <div>
+        <input type="submit" value="Rechnen">
+      </div>
+    </form>
+    <div class="output"></div>
+  </main>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
