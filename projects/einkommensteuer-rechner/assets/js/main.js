@@ -113,9 +113,8 @@ form.addEventListener('submit', (e) => {
   }
 
   if (type == 'zusammen') {
-    output.innerText = `Je Person beträgt die Einkommensteuer ${(
-      incomeTax.calculate(zve, Number(year)) / 2
-    )
+    output.innerText = `Je Person beträgt die Einkommensteuer ${incomeTax
+      .calculate(zve / 2, Number(year))
       .toFixed(2)
       .replace('.', ',')} Euro.`;
     return;
