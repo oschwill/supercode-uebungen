@@ -26,7 +26,6 @@ form.addEventListener('submit', (e) => {
         // decode Variante über eine mod custom Function
         let varVal = val.charCodeAt() - startChar;
         varVal = mod(varVal - key, maxCharsInAlpha);
-        console.log(varVal);
         varVal += startChar;
 
         returnString += String.fromCharCode(varVal);
