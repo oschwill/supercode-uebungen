@@ -4,44 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/styles.css">
   <title>Hangman</title>
 </head>
 
 <body>
   <main>
-    <div class="trys">3 : 12</div>
+    <div class="trys">ATTEMPT 3 OF 4</div>
     <div class="buttons">
-      <button value="A">A</button>
-      <button value="B">B</button>
-      <button value="C">C</button>
-      <button value="D">D</button>
-      <button value="E">E</button>
-      <button value="F">F</button>
-      <button value="G">G</button>
-      <button value="H">H</button>
-      <button value="I">I</button>
-      <button value="J">J</button>
-      <button value="K">K</button>
-      <button value="L">L</button>
-      <button value="M">N</button>
-      <button value="O">O</button>
-      <button value="P">P</button>
-      <button value="Q">Q</button>
-      <button value="R">R</button>
-      <button value="S">S</button>
-      <button value="T">T</button>
-      <button value="U">U</button>
-      <button value="V">V</button>
-      <button value="W">W</button>
-      <button value="X">X</button>
-      <button value="Y">Y</button>
-      <button value="Z">Z</button>
+      <button value="A" class="button-hover">A</button>
+      <button value="B" class="button-hover">B</button>
+      <button value="C" class="button-hover">C</button>
+      <button value="D" class="button-hover">D</button>
+      <button value="E" class="button-hover">E</button>
+      <button value="F" class="button-hover">F</button>
+      <button value="G" class="button-hover">G</button>
+      <button value="H" class="button-hover">H</button>
+      <button value="I" class="button-hover">I</button>
+      <button value="J" class="button-hover">J</button>
+      <button value="K" class="button-hover">K</button>
+      <button value="L" class="button-hover">L</button>
+      <button value="M" class="button-hover">M</button>
+      <button value="N" class="button-hover">N</button>
+      <button value="O" class="button-hover">O</button>
+      <button value="P" class="button-hover">P</button>
+      <button value="Q" class="button-hover">Q</button>
+      <button value="R" class="button-hover">R</button>
+      <button value="S" class="button-hover">S</button>
+      <button value="T" class="button-hover">T</button>
+      <button value="U" class="button-hover">U</button>
+      <button value="V" class="button-hover">V</button>
+      <button value="W" class="button-hover">W</button>
+      <button value="X" class="button-hover">X</button>
+      <button value="Y" class="button-hover">Y</button>
+      <button value="Z" class="button-hover">Z</button>
     </div>
     <div class="display">
-      ____________
+      __A________O
     </div>
   </main>
+  <aside>
+    <div class="headline">
+      <h3 class="animate-headline">HANGMAN</h3>
+    </div>
+    <div class="start">
+      <div class="center">
+        <h1>CHOOSE YOUR DIFFICULTY NOW!</h1>
+        <!-- <i class="fa-solid fa-arrow-right fa-beat error-arrow" style="color: #ff0026;"></i> -->
+        <select name="difficulty" id="difficulty">
+          <option value="" selected>Choose your Difficulty</option>
+          <option value="easy_peasy">Easy Peasy🍀</option>
+          <option value="normal">normal</option>
+          <option value="hard">Hard</option>
+          <option value="impossible">Impossible💀</option>
+        </select>
+
+        <button class="start-game">Start Game</button>
+      </div>
+    </div>
+    <div class="footer-error">
+      <i class="fa-solid fa-circle-exclamation fa-beat-fade error-arrow" style="color: #ff0000;">
+        <span>SET your Difficulty!</span></i>
+      <i class="fa-solid fa-thumbs-up fa-bounce thumb-up" style="color: #87f187;">
+        <span>Now you can Start your Game!</span></i>
+    </div>
+  </aside>
 
   <script src="./assets/js/main.js"></script>
 </body>
