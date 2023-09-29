@@ -183,21 +183,6 @@ aside .start .center button:hover {
   border: 5px solid red !important;
 }
 
-.new-char-income {
-  animation: animate-income-char 1s linear;
-  color: rgb(8, 46, 8);
-}
-
-@keyframes animate-income-char {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
 @keyframes animate-game-name {
   to {
     background-position: 200% center;
