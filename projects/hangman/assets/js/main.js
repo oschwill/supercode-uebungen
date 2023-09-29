@@ -16,16 +16,6 @@ let maxTries = 0;
 let actualTry = 0;
 let outputHashedWord = [];
 
-const newCharSpinning = [
-  { transform: 'rotate(0) scale(1)' },
-  { transform: 'rotate(360deg) scale(0)' },
-];
-
-const newCharTiming = {
-  duration: 2000,
-  iterations: 3,
-};
-
 const words = [
   'Abendbrot',
   'Brueckentag',
@@ -99,14 +89,24 @@ const clickButton = (e) => {
     let rndClass = `new-char-income${(Date.now() * Math.random()).toFixed(0)}`;
 
     foundIndex.forEach((i) => {
-      outputHashedWord[i] = `<span class="${rndClass}">${charVal}</span>`;
+      outputHashedWord[
+        i
+      ] = `<span class="${rndClass}" style="display: inline-block;">${charVal}</span>`;
     });
 
     // DISPLAY WORD
     displayGuess.innerHTML = outputHashedWord.join('');
+    let getNewCharElements = document.querySelectorAll(`.${rndClass}`);
 
-    console.log(document.querySelector(`.${rndClass}`));
-    document.querySelector(`.${rndClass}`).animate(newCharSpinning, newCharTiming);
+    getNewCharElements.forEach((val) => {
+      val.animate(
+        {
+          transform: ['scale(1)', 'scale(1.2)', 'scale(1)'],
+          color: ['black', 'red', 'black'],
+        },
+        1000
+      );
+    });
 
     // CHECK IF WON
     if (outputHashedWord.indexOf('_') === -1) {
