@@ -207,6 +207,23 @@ nav .lost-message {
   padding-top: 5%;
 }
 
+footer {
+  margin: 0 auto;
+  width: 200px;
+}
+
+footer p {
+  position: fixed;
+  background-color: rgba(78, 70, 70, 0.75);
+  font-size: 1rem;
+  color: white;
+  padding: 5px 10px;
+  bottom: 0;
+  text-align: center;
+  z-index: 30;
+  margin: 0 auto;
+}
+
 @keyframes animate-lost-game {
   from {
     transform: scale(0);
