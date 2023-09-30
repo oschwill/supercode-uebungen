@@ -105,7 +105,7 @@ const clickButton = (e) => {
           transform: ['scale(1)', 'scale(1.2)', 'scale(1)'],
           color: ['black', 'red', 'black'],
         },
-        1000
+        500
       );
     });
 
@@ -116,17 +116,27 @@ const clickButton = (e) => {
         b.classList.remove('button-hover');
       });
 
-      displayGuess.style.color = 'green';
+      displayGuess.style.color = 'lightgreen';
 
       displayGuess.animate(
         {
-          transform: ['scale(1.25)', 'translateY(-20%)'],
-          color: ['green', 'lightgreen', 'green'],
+          transform: ['scale(1.35)', 'translateY(-75%)'],
+          color: ['darkgreen', 'lightgreen', 'darkgreen'],
         },
-        3000
+        5000
       );
-      async () =>
-        await new Promise((resolve) => setTimeout(resolve, 3000)).then(console.log('animated'));
+
+      new Promise((resolve) => setTimeout(resolve, 5000)).then(() => {
+        displayGuess.innerHTML = 'YOU HAVE WON THE MATCH<br/>';
+        displayGuess.style.backgroundColor = 'rgba(0,0,0,0.25';
+        displayGuess.insertAdjacentHTML(
+          'beforeend',
+          `<button class="restart-game">Restart</button>`
+        );
+
+        createRestartEvent();
+      });
+
       return;
     }
   }
@@ -150,8 +160,11 @@ const checkLooseStatus = async () => {
 
   // erzeuge nach 3 Sekunden den Button!
   lostMessage.insertAdjacentHTML('beforeend', '<button class="restart-game">Restart</button>');
-  let restart = document.querySelector('.restart-game');
+  createRestartEvent();
+};
 
+const createRestartEvent = () => {
+  let restart = document.querySelector('.restart-game');
   restart.addEventListener('click', (e) => location.reload());
 };
 
