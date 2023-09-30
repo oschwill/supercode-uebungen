@@ -8,6 +8,7 @@ const chooseDiffSuccess = document.querySelector('.thumb-up');
 const gameMenu = document.querySelector('aside');
 const tries = document.querySelector('.trys');
 const displayGuess = document.querySelector('.display');
+const lostMessage = document.querySelector('nav .lost-message');
 
 /* PROPERTIES */
 let diffMode = '';
@@ -110,21 +111,49 @@ const clickButton = (e) => {
 
     // CHECK IF WON
     if (outputHashedWord.indexOf('_') === -1) {
-      // WON GAME...
+      buttons.forEach((b) => {
+        b.disabled = true;
+        b.classList.remove('button-hover');
+      });
+
+      displayGuess.style.color = 'green';
+
+      displayGuess.animate(
+        {
+          transform: ['scale(1.25)', 'translateY(-20%)'],
+          color: ['green', 'lightgreen', 'green'],
+        },
+        3000
+      );
+      async () =>
+        await new Promise((resolve) => setTimeout(resolve, 3000)).then(console.log('animated'));
+      return;
     }
-    outputHashedWord.indexOf('_');
   }
 
   // CHECK IF LOST!
   if (actualTry === maxTries) {
-    //... LOST GAME!
-    alert('GAME IS OVER?!');
+    checkLooseStatus();
+    return;
   }
 };
 
-function getRandomWord(arr) {
+const getRandomWord = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)];
-}
+};
+
+const checkLooseStatus = async () => {
+  lostMessage.style.display = 'flex';
+
+  // 3 sekunden warten
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
+  // erzeuge nach 3 Sekunden den Button!
+  lostMessage.insertAdjacentHTML('beforeend', '<button class="restart-game">Restart</button>');
+  let restart = document.querySelector('.restart-game');
+
+  restart.addEventListener('click', (e) => location.reload());
+};
 
 /* EVENT LISTENER */
 // START GAME

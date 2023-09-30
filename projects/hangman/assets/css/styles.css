@@ -78,7 +78,9 @@ button:disabled {
   cursor: default;
 }
 
-aside .start {
+aside .start,
+aside .lost-message,
+nav .lost-message {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +119,8 @@ aside .start .center h1 {
 }
 
 aside .start .center select,
-aside .start .center button {
+aside .start .center button,
+.lost-message button {
   text-align: center;
   margin: 25px auto;
   cursor: pointer;
@@ -127,6 +130,10 @@ aside .start .center button {
   background-color: greenyellow;
   font-size: 2.5rem;
   border: none;
+}
+
+.lost-message button {
+  position: fixed;
 }
 
 aside .start .center div {
@@ -151,7 +158,8 @@ aside .start .center div {
 }
 
 aside .start .center select:hover,
-aside .start .center button:hover {
+aside .start .center button:hover,
+nav .lost-message button:hover {
   background-color: rgb(209, 245, 154);
 }
 
@@ -181,6 +189,25 @@ aside .start .center button:hover {
 
 .error {
   border: 5px solid red !important;
+}
+
+nav .lost-message {
+  display: none;
+  flex-direction: column;
+  font-size: 20rem;
+  text-align: center;
+  color: red;
+  animation: animate-lost-game 0.5s linear;
+  padding-top: 5%;
+}
+
+@keyframes animate-lost-game {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes animate-game-name {
