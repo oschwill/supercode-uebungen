@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.top {
+  font-size: 1.5rem;
+  height: 50vh;
+}
+
+.bottom {
+  color: white;
+  height: 50vh;
+  background-color: black;
+  padding-top: 50px;
+}
+
+.bottom .electronic-clock {
+  border: 30px solid white;
+  border-radius: 15px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bottom .electronic-clock .clock {
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+}
+
+.bottom .electronic-clock table {
+  text-align: center;
+  width: 100%;
+  border-radius: 25px;
+  border: 1px solid rgb(223, 205, 205);
+  padding: 15px;
+}
+
+.bottom .electronic-clock table tr:first-of-type td {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.bottom .electronic-clock table tr:last-of-type td {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 15px;
+}
