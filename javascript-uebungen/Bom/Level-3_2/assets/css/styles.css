@@ -1,0 +1,23 @@
+#minuteCountdownBereich {
+  background-color: #dcffcc;
+  color: #baabda;
+  display: inline-block;
+  padding: 10px;
+  font-family: Geneva;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 5px;
+  background: #9fdfcd;
+}
+
+button {
+  border-radius: 5px;
+  background: #d79abc;
+}
+
+button:hover {
+  background-color: #3a222f;
+  color: lightgray;
+}
