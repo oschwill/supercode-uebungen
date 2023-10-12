@@ -26,7 +26,10 @@ const getSingleData = async (singleUrl) => {
 
 const buildSite = async () => {
   if (!urlParams) {
-    fetchData = await getAllData();
+    // Wir holen uns nur einmalig die Daten
+    if (!fetchData) {
+      fetchData = await getAllData();
+    }
     buildGallery(fetchData);
     return;
   }
