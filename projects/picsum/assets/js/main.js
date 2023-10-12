@@ -6,16 +6,8 @@ let urlParams = window.location.search.replace('?page=', '').split('&')[0];
 const fetchUrl = 'https://picsum.photos/v2/list';
 const browserUrl = window.location.href;
 
-const getAllData = async () => {
-  return await fetch(fetchUrl)
-    .then((response) => response.json())
-    .then((data) => data)
-    .catch((error) => {
-      console.error('Error Message, data not found', error);
-    });
-};
-
-const getSingleData = async (singleUrl) => {
+// Wenn kein Parameter übergeben dann ist die defualt url die fetchUrl
+const getData = async (singleUrl = fetchUrl) => {
   return await fetch(singleUrl)
     .then((response) => response.json())
     .then((data) => data)
@@ -28,7 +20,7 @@ const buildSite = async () => {
   if (!urlParams) {
     // Wir holen uns nur einmalig die Daten
     if (!fetchData) {
-      fetchData = await getAllData();
+      fetchData = await getData();
     }
     buildGallery(fetchData);
     return;
@@ -37,7 +29,7 @@ const buildSite = async () => {
   let decodeUrlParam = decodeURIComponent(urlParams);
 
   const singleUrl = `https://picsum.photos/id/${decodeUrlParam}/info`;
-  fetchSingleData = await getSingleData(singleUrl);
+  fetchSingleData = await getData(singleUrl);
 
   buildSingleImagePage(fetchSingleData);
 };
