@@ -60,7 +60,7 @@ pauseButton.addEventListener('click', () => (isPaused = true));
 resetButton.addEventListener('click', () => resetFunction());
 
 const resetFunction = () => {
-  // Wir resetten alles
+  // Wir resetten alles und setzten den startbool auf false
   isStarted = false;
   // wir clearn den timer
   clearInterval(timer);
