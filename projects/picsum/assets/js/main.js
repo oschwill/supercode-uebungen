@@ -4,11 +4,10 @@ let fetchData, fetchSingleData;
 let urlParams = window.location.search.replace('?page=', '').split('&')[0];
 
 const fetchUrl = 'https://picsum.photos/v2/list';
-const browserUrl = window.location.href;
 
 // Wenn kein Parameter übergeben dann ist die defualt url die fetchUrl
-const getData = async (singleUrl = fetchUrl) => {
-  return await fetch(singleUrl)
+const getData = async (url = fetchUrl) => {
+  return await fetch(url)
     .then((response) => response.json())
     .then((data) => data)
     .catch((error) => {
