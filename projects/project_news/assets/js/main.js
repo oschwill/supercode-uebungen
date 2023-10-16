@@ -25,7 +25,7 @@ const getArticles = async (e) => {
 
   const searchVal = document.querySelector('#search').value;
   const language = document.querySelector('#lang').value;
-  const sortBy = document.querySelector('#sort');
+  const sortBy = document.querySelector('#sort').value;
 
   if (searchVal === '') {
     alert('input search Value!!');
@@ -49,7 +49,7 @@ const buildOutput = (data) => {
 
   output.innerHTML = data.articles
     .map((d) => {
-      return `<div class="item">
+      return `<article class="item">
         <h2>${d.title}
         </h2>
         <p>${d.content}</p>
@@ -61,7 +61,7 @@ const buildOutput = (data) => {
         <div>
           <a href="${d.url}" target="_blank">Zum Artikel</a>
         </div>
-      </div>`;
+      </article>`;
     })
     .join('');
 
