@@ -5,10 +5,7 @@ let loader, loadMore;
 
 /* PROPERTIES */
 let currentItems = 0;
-const nextItems = 12;
-
-const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY';
-const url2 = `https://newsapi.org/v2/everything?q=Apple&sortBy=popularity&language=en&apiKey=${apiKey}`;
+const nextItems = 12; // lade immer 12 weitere Article
 
 /* FUNCTIONS */
 const getDataByParam = async (url) => {
