@@ -36,7 +36,7 @@ const getArticles = async (e) => {
   output.insertAdjacentElement('beforeend', returnLoader());
   loader = document.querySelector('.loader');
 
-  const url = `https://newsapi.org/v2/everything?q=${searchVal}&sortBy=${sortBy}&language=${language}&apiKey=${apiKey}`;
+  const url = `http://newsapi.org/v2/everything?q=${searchVal}&sortBy=${sortBy}&language=${language}&apiKey=${apiKey}`;
 
   const data = await getDataByParam(url);
 
@@ -52,6 +52,7 @@ const buildOutput = (data) => {
       return `<article class="item">
         <h2>${d.title}
         </h2>
+        <span>published at ${d.publishedAt}</span>
         <p>${d.content}</p>
         <img src="${
           d.urlToImage
