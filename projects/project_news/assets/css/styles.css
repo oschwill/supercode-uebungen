@@ -28,7 +28,8 @@ h1 {
   padding: 20px;
 }
 
-.form input {
+.form input,
+.form select {
   padding: 5px;
 }
 
