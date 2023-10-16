@@ -38,6 +38,13 @@ h1 {
   margin: 0 auto;
   align-self: center;
   background-color: white;
+  transition: all linear 0.5s;
+}
+
+.form input[type='submit']:hover,
+.item div a:hover {
+  background-color: green;
+  color: wheat;
 }
 
 .output {
@@ -62,8 +69,14 @@ h1 {
 
 .item {
   padding: 20px;
-  border: 1px solid black;
+  border: 2px solid black;
   display: none;
+  transition: all linear 0.25s;
+  box-shadow: 0 4px 10px black;
+}
+
+.item:hover {
+  transform: scale(1.02);
 }
 
 .item h2 {
