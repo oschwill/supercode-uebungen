@@ -1,3 +1,9 @@
+/* PICTURES */
+import brush from '../../assets/img/brush.svg';
+import objectSelect from '../../assets/img/object-select.svg';
+import megaphone from '../../assets/img/megaphone.svg';
+import globeImg from '../../assets/img/globe-line.svg';
+
 const MainTop = () => {
   return (
     <div className="describe-us">
@@ -8,7 +14,7 @@ const MainTop = () => {
       <div className="describe-boxes">
         <div className="box-item">
           <div className="left-side">
-            <img src="./img/brush.svg" alt="brush" />
+            <img src={brush} alt="brush" />
           </div>
           <div className="right-side">
             <h2>Brand Identity</h2>
@@ -21,7 +27,7 @@ const MainTop = () => {
         </div>
         <div className="box-item">
           <div className="left-side">
-            <img src="./img/object-select.svg" alt="object-select" />
+            <img src={objectSelect} alt="object-select" />
           </div>
           <div className="right-side">
             <h2>Illustration</h2>
@@ -34,7 +40,7 @@ const MainTop = () => {
         </div>
         <div className="box-item">
           <div className="left-side">
-            <img src="./img/megaphone.svg" alt="megaphone" />
+            <img src={megaphone} alt="megaphone" />
           </div>
           <div className="right-side">
             <h2>Marketing</h2>
@@ -47,7 +53,7 @@ const MainTop = () => {
         </div>
         <div className="box-item">
           <div className="left-side">
-            <img src="./img/globe-line.svg" alt="megaphone" />
+            <img src={globeImg} alt="megaphone" />
           </div>
           <div className="right-side">
             <h2>Web Design</h2>
