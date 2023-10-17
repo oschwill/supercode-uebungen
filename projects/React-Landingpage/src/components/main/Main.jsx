@@ -1,4 +1,3 @@
-import Footer from '../footer/Footer';
 import MainBottom from './MainBottom';
 import MainTop from './MainTop';
 import './main.css';
@@ -8,7 +7,6 @@ const Main = () => {
     <main>
       <MainTop />
       <MainBottom />
-      <Footer />
     </main>
   );
 };
