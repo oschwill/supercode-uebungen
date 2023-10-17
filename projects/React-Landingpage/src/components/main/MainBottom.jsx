@@ -1,8 +1,18 @@
+/* IMAGES */
+import saladImg from '../../assets/img/salat.jpeg';
+import pizzaImg from '../../assets/img/pizza.jpeg';
+import frikaImg from '../../assets/img/frikadellen.jpeg';
+import glasImg from '../../assets/img/glass.jpeg';
+import secondPizzaImg from '../../assets/img/pizza2.jpeg';
+import spagetthiImg from '../../assets/img/spagetthi.jpeg';
+import tellerImg from '../../assets/img/teller.jpeg';
+import scampiImg from '../../assets/img/scampi.jpeg';
+
 const MainBottom = () => {
   return (
     <div className="gallery">
       <div className="gallery-item">
-        <img src="./img/salat.jpeg" alt="Salat" />
+        <img src={saladImg} alt="Salat" />
         <h2>Fusce dictum finibus</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
@@ -11,7 +21,7 @@ const MainBottom = () => {
         <span className="price">$45 / $55</span>
       </div>
       <div className="gallery-item">
-        <img src="./img/pizza.jpeg" alt="Salat" />
+        <img src={pizzaImg} alt="Pizza" />
         <h2>Aliquam Sagnittis</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
@@ -20,7 +30,7 @@ const MainBottom = () => {
         <span className="price">$45 / $55</span>
       </div>
       <div className="gallery-item">
-        <img src="./img/frikadellen.jpeg" alt="Salat" />
+        <img src={frikaImg} alt="Frikadellen" />
         <h2>Lorem, ipsum.</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
@@ -29,7 +39,7 @@ const MainBottom = () => {
         <span className="price">$45 / $55</span>
       </div>
       <div className="gallery-item">
-        <img src="./img/glass.jpeg" alt="Salat" />
+        <img src={glasImg} alt="Glas" />
         <h2>Fusce dictum finibus</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
@@ -38,7 +48,7 @@ const MainBottom = () => {
         <span className="price">$45 / $55</span>
       </div>
       <div className="gallery-item">
-        <img src="./img/pizza2.jpeg" alt="Salat" />
+        <img src={secondPizzaImg} alt="Pizza2" />
         <h2>Lorem, ipsums</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
@@ -47,7 +57,7 @@ const MainBottom = () => {
         <span className="price">$45 / $55</span>
       </div>
       <div className="gallery-item">
-        <img src="./img/scampi.jpeg" alt="Salat" />
+        <img src={scampiImg} alt="Scampi" />
         <h2>Fusce dictum finibus</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
@@ -56,7 +66,7 @@ const MainBottom = () => {
         <span className="price">$45 / $55</span>
       </div>
       <div className="gallery-item">
-        <img src="./img/spagetthi.jpeg" alt="Salat" />
+        <img src={spagetthiImg} alt="Spagetthi" />
         <h2>Fusce dictum </h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
@@ -65,7 +75,7 @@ const MainBottom = () => {
         <span className="price">$45 / $55</span>
       </div>
       <div className="gallery-item">
-        <img src="./img/teller.jpeg" alt="Teller" />
+        <img src={tellerImg} alt="Teller" />
         <h2>dictum finibus</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates quidem,
