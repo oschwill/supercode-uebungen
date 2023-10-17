@@ -1,0 +1,11 @@
+footer {
+  padding: 20px;
+  background-color: blanchedalmond;
+}
+
+footer p {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+}

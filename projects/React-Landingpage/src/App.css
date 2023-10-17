@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-bg-color: green;
+  --font-color-white: white;
+  --font-color-black: black;
+  --font-color-green: green;
+  --font-color-blue: rgb(57, 113, 145);
+  --font-color-cyan: rgb(55, 171, 144);
+  --border-color: white;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
