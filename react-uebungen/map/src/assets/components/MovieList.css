@@ -1,0 +1,12 @@
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.movie-item {
+  text-align: center;
+  background-color: rgb(33, 26, 26);
+  color: white;
+  padding: 5px;
+}
