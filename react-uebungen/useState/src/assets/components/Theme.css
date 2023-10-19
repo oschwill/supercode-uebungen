@@ -1,0 +1,21 @@
+.secondMain {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragraph {
+  color: white;
+}
+
+.secondMain p {
+  font-size: 30px;
+}
+
+.secondMain button {
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
