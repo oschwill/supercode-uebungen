@@ -4,7 +4,16 @@ import Button from './Button';
 import './InputMoney.css';
 
 const InputMoney = ({ onSetMoney, inputMoney, onSetInputMoney }) => {
-  // const [inputMoney, setInputMoney] = useState('');
+  function handleOnChangeInputMoney(value) {
+    console.log(value);
+    if (value.includes('-')) {
+      // Clear input
+      onSetInputMoney('');
+      return;
+    }
+
+    onSetInputMoney(value);
+  }
 
   return (
     <div className="input">
@@ -13,9 +22,10 @@ const InputMoney = ({ onSetMoney, inputMoney, onSetInputMoney }) => {
         <input
           type="number"
           id="input-money"
+          min="0"
           placeholder="Betrag in Euro"
           value={inputMoney}
-          onChange={(e) => onSetInputMoney(e.target.value)}
+          onChange={(e) => handleOnChangeInputMoney(e.target.value)}
         />
       </div>
       <div>
