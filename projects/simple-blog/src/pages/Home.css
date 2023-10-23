@@ -1,0 +1,28 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.top,
+.bottom {
+  height: 50vh;
+}
+
+.top {
+  background: url('../assets/images/Home_Background.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.bottom {
+  padding: 5% 7.5%;
+}
+
+.bottom h2 {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+  width: 250px;
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+}

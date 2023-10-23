@@ -1,0 +1,23 @@
+header {
+  background-color: bisque;
+  padding: 10px;
+}
+
+header .nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+header .nav a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(153, 198, 183);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+header .nav .active {
+  background-color: rgb(65, 103, 91);
+}

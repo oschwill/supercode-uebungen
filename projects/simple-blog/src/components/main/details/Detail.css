@@ -1,0 +1,35 @@
+main .blog-detail {
+  display: flex;
+  flex-direction: column;
+  margin: 7.5vw;
+}
+
+main .blog-detail img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+main .blog-detail .content {
+  margin: 30px 15vw;
+}
+
+main .blog-detail .content div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+main .blog-detail .content div P:first-of-type {
+  font-size: 2.4rem;
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+main .blog-detail .content .description {
+  margin-bottom: 20px;
+}
+
+main .blog-detail .content .author {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
