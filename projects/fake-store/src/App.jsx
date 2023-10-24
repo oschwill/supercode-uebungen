@@ -7,7 +7,7 @@ const fetchUrl = 'https://fakestoreapi.com/products';
 import './App.css';
 import Home from './pages/Home';
 import ShopList from './pages/ShopList';
-import ItemDetails from './components/shop/ItemDetails';
+import ItemDetails from './pages/ItemDetails';
 
 function App() {
   const [shopData, setShopData] = useState([]);
