@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(30, 29, 29);
+}
+
+a {
+  color: lightblue;
+  font-size: 1.25rem;
+}
