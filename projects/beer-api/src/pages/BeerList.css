@@ -1,0 +1,22 @@
+.beer-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 5vh 5vw;
+}
+
+.bottom-button {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.bottom-button button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  background-color: var(--background-font-color);
+}

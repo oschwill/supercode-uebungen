@@ -1,0 +1,22 @@
+@font-face {
+  font-family: RobotoSlab;
+  src: url('./assets/fonts/RobotoSlab-VariableFont_wght.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-font-color: #ffca41;
+  --font-color-white: white;
+  --border-color: #333;
+}
+
+html {
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,6 @@
+.beers {
+  margin: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

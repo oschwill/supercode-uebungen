@@ -1,0 +1,47 @@
+.beer-items {
+  display: flex;
+  gap: 15%;
+  border-bottom: 2px solid var(--border-color);
+  padding: 15px;
+}
+
+.beer-items .left-side {
+  width: 35%;
+}
+
+.beer-items .left-side img {
+  height: 381px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+.beer-items .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--border-color);
+}
+
+.beer-items .right-side h2 {
+  font-size: 3rem;
+}
+
+.beer-items .right-side p {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.beer-items .right-side p:first-of-type {
+  color: var(--background-font-color);
+}
+
+.beer-items .right-side a {
+  text-align: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--font-color-white);
+  background-color: var(--background-font-color);
+  width: 150px;
+  padding: 5px 15px;
+  border-radius: 25px;
+}

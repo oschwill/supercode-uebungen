@@ -1,0 +1,55 @@
+main .beer-detail {
+  margin: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+main .beer-detail img {
+  max-width: 75%;
+  max-height: 50%;
+  align-self: center;
+  margin-bottom: 25px;
+}
+
+main .beer-detail h2 {
+  font-size: 3rem;
+}
+
+main .beer-detail .tagline {
+  font-size: 1.8rem;
+  color: var(--background-font-color);
+  margin-bottom: 30px;
+}
+
+main .beer-detail .beer-brewed,
+main .beer-detail .beer-attenuation {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--border-color);
+  opacity: 0.65;
+}
+
+main .beer-detail .description {
+  margin-bottom: 35px;
+  font-size: 1.5rem;
+}
+
+main .beer-detail .arrow-button a {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--background-font-color);
+}
+
+main .beer-detail .arrow-button a .arrow {
+  font-size: 3rem;
+}

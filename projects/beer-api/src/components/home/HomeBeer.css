@@ -1,0 +1,28 @@
+.home-beer {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-beer img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: -5px;
+}
+
+.home-beer button {
+  cursor: pointer;
+  color: var(--font-color-white);
+  background-color: var(--background-font-color);
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: left;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.home-beer p {
+  font-size: 1.8rem;
+}
