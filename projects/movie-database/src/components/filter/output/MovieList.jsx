@@ -9,7 +9,7 @@ const MovieList = () => {
   return (
     <section className="grid grid-cols-5 gap-4 mt-16 w-11/12">
       {movieData.length > 0 ? (
-        movieData.map((data, index) => {
+        movieData.map((data) => {
           return (
             <article
               className="bg-movieBoxBg text-white flex flex-col text-center gap-6 pt-8 pb-12 relative"
