@@ -45,7 +45,7 @@ function App() {
                 path="/"
                 element={<Home userInput={{ input, setInput, handleInputResult }} />}
               />
-              <Route path="/detail/:id" element={<MovieDetail />} />
+              <Route path="/detail/:name" element={<MovieDetail />} />
             </Routes>
           </BrowserRouter>
         </DataFilterContext.Provider>

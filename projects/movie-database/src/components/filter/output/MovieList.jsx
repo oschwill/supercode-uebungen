@@ -33,7 +33,7 @@ const MovieList = () => {
                 })}
               </div>
               <Link
-                to={`/detail/${index}`}
+                to={`/detail/${data.title}`}
                 target="_blank"
                 className="border-2 hover:bg-slate-600 absolute bottom-1 w-full"
               >
