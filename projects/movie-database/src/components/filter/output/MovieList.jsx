@@ -3,14 +3,14 @@ import { MovieDataContext } from '../../../Context/Context';
 import { Link } from 'react-router-dom';
 import CountStars from './CountStars';
 
-const imagePerRow = 10;
+const moviePerRow = 10;
 const MovieList = () => {
   const movieData = useContext(MovieDataContext);
 
-  const [next, setNext] = useState(imagePerRow);
+  const [next, setNext] = useState(moviePerRow);
 
   const handleMoreMovies = () => {
-    setNext(next + imagePerRow);
+    setNext(next + moviePerRow);
   };
 
   return (
