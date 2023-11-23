@@ -38,7 +38,7 @@ export const upperCaseString = (_string) => {
 };
 
 export const equalFirstLastLetter = (_string) => {
-  return _string[0] === _string[_string.length - 1];
+  return _string[0].toLowerCase() === _string[_string.length - 1].toLowerCase();
 };
 
 export default getFirstElement;

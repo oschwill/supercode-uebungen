@@ -36,4 +36,4 @@ console.log(firstLetterUpper('test'));
 console.log('###############################################################');
 console.log(upperCaseString('test'));
 console.log('###############################################################');
-console.log(equalFirstLastLetter('tesd'));
+console.log(equalFirstLastLetter('Test'));
