@@ -1,0 +1,248 @@
+.home {
+  background-color: #f3c552;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.home .overlap-wrapper {
+  background-color: #f3c552;
+  width: 1452px;
+  height: 1089px;
+}
+
+.home .overlap {
+  height: 1089px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.home .desktop {
+  position: relative;
+  width: 1152px;
+  height: 864px;
+  top: 113px;
+  left: 150px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 40px 80px #00000040;
+}
+
+.home .group {
+  height: 800px;
+}
+
+.home .overlap-group {
+  position: relative;
+  width: 1152px;
+  height: 800px;
+}
+
+.home .overlap-group-wrapper {
+  position: absolute;
+  width: 630px;
+  height: 800px;
+  top: 0;
+  left: 522px;
+}
+
+.home .div {
+  position: relative;
+  width: 638px;
+  height: 800px;
+  left: -8px;
+}
+
+.home .rectangle {
+  position: absolute;
+  width: 370px;
+  height: 800px;
+  top: 0;
+  left: 268px;
+}
+
+.home .img {
+  position: absolute;
+  width: 398px;
+  height: 398px;
+  top: 392px;
+  left: 0;
+}
+
+.home .simple-modern {
+  position: absolute;
+  width: 568px;
+  height: 577px;
+  top: 165px;
+  left: 70px;
+}
+
+.home .group-2 {
+  position: absolute;
+  width: 1152px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
+
+.home .group-3 {
+  position: absolute;
+  width: 194px;
+  height: 33px;
+  top: 23px;
+  left: 80px;
+}
+
+.home .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 38px;
+  font-family: 'Nunito', Helvetica;
+  font-weight: 700;
+  color: #3e3f43;
+  font-size: 24px;
+  letter-spacing: 6px;
+  line-height: normal;
+}
+
+.home .group-4 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 1px;
+  left: 0;
+}
+
+.home .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 48px;
+  position: absolute;
+  top: 20px;
+  left: 387px;
+}
+
+.home .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  font-family: 'Nunito', Helvetica;
+  font-weight: 800;
+  color: #daa520;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  font-family: 'Nunito', Helvetica;
+  font-weight: 400;
+  color: #222222bf;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .div-wrapper {
+  position: relative;
+  width: 139px;
+  height: 40px;
+  margin-right: -2px;
+}
+
+.home .overlap-group-2 {
+  width: 137px;
+  height: 40px;
+  background-color: #f9bdbd;
+  border: 1px solid;
+  border-color: #3e3f43;
+  position: relative;
+  border-radius: 4px;
+}
+
+.home .text-wrapper-4 {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  font-family: 'Nunito', Helvetica;
+  font-weight: 700;
+  color: #3e3f43;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .group-5 {
+  position: absolute;
+  width: 508px;
+  height: 376px;
+  top: 217px;
+  left: 102px;
+}
+
+.home .are-you-looking-for {
+  position: absolute;
+  width: 504px;
+  top: 0;
+  left: 0;
+  font-family: 'Nunito', Helvetica;
+  font-weight: 400;
+  color: #3e3f43;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .span {
+  font-family: 'Nunito', Helvetica;
+  font-weight: 400;
+  color: #3e3f43;
+  font-size: 36px;
+  letter-spacing: 0;
+}
+
+.home .text-wrapper-5 {
+  font-weight: 700;
+}
+
+.home .p {
+  position: absolute;
+  width: 504px;
+  top: 114px;
+  left: 0;
+  font-family: 'Nunito', Helvetica;
+  font-weight: 700;
+  color: #313135;
+  font-size: 72px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home .group-6 {
+  position: absolute;
+  width: 177px;
+  height: 50px;
+  top: 326px;
+  left: 0;
+}
+
+.home .overlap-group-3 {
+  width: 175px;
+  height: 50px;
+  background-color: #daa520;
+  position: relative;
+  border-radius: 4px;
+}
+
+.home .text-wrapper-6 {
+  position: absolute;
+  top: 14px;
+  left: 24px;
+  font-family: 'Nunito', Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
