@@ -28,6 +28,11 @@ app.get('/api/blog', (req, res) => {
 // create blog
 app.post('/api/blog', upload.single('header-img'), (req, res) => {
   const blog = req.body;
+  if (typeof blog === 'undefined' || typeof req.file === 'undefined') {
+    res.status(500).end('NO INPUT DATA');
+    return;
+  }
+
   saveBlog(blog, req.file, res);
   res.end();
 });

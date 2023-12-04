@@ -5,7 +5,7 @@ const Admin = () => {
 
   const createBlog = (e) => {
     e.preventDefault();
-    console.log(e.target);
+
     const form = new FormData(e.target);
 
     fetch('http://localhost:9000/api/blog', {
@@ -33,6 +33,7 @@ const Admin = () => {
             id="blog_title"
             name="blog_title"
             className="border-2 p-2 bg-gray-300"
+            required
           />
         </div>
         <div className="flex flex-col">
@@ -42,6 +43,7 @@ const Admin = () => {
             name="header-img"
             id="header-img"
             className="border-2 p-2 bg-gray-300"
+            required
           />
         </div>
         <div className="flex flex-col">
@@ -52,6 +54,7 @@ const Admin = () => {
             cols="30"
             rows="10"
             className="border-2 p-2 bg-gray-300"
+            required
           ></textarea>
         </div>
         <button className="bg-green-400 p-2 font-bold hover:bg-green-200">PUBLISH</button>
