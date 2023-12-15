@@ -56,7 +56,7 @@ const Details = () => {
                 />
                 <div className="flex gap-16 items-center">
                   <p>Rating: {data.rated}</p>
-                  <p>Duration: {data.duration ? data.duration : '-'}</p>
+                  <p>Duration: {data.runtime ? `${data.runtime} min` : '-'}</p>
                 </div>
               </div>
               <div className="flex flex-col">
