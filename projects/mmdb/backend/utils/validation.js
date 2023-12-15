@@ -7,5 +7,5 @@ export const schema = Joi.object({
   genres: Joi.array().required(),
   rated: Joi.string().max(10).required(),
   poster: Joi.string(),
-  description: Joi.string().max(1000),
+  plot: Joi.string().max(1000),
 }).with('title', 'year');

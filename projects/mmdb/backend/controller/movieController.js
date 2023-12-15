@@ -43,7 +43,7 @@ export const saveMovie = async (req, res) => {
     genres: value.genres,
     rated: value.rated,
     poster: value.poster,
-    description: value.description,
+    plot: value.plot,
   };
 
   try {
@@ -82,7 +82,7 @@ export const editMovie = async (req, res) => {
       genres: value.genres,
       rated: value.rated,
       poster: value.poster,
-      description: value.description,
+      plot: value.plot,
     },
   };
 

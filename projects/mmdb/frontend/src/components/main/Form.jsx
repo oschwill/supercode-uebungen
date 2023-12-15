@@ -1,18 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-const Form = ({
-  title,
-  year,
-  director,
-  genres,
-  rated,
-  poster,
-  description,
-  method,
-  id,
-  setRefresh,
-}) => {
+const Form = ({ title, year, director, genres, rated, poster, plot, method, id, setRefresh }) => {
   const [input, setInput] = useState({
     title: title ? title : '',
     year: year ? year : '',
@@ -20,7 +9,7 @@ const Form = ({
     genres: genres ? genres : '',
     rated: rated ? rated : '',
     poster: poster ? poster : '',
-    description: description ? description : '',
+    plot: plot ? plot : '',
   });
 
   const [errorMessage, setErrorMessage] = useState(null);
@@ -38,7 +27,7 @@ const Form = ({
       e.target.genres.value === '' ||
       e.target.rated.value === '' ||
       e.target.poster.value === '' ||
-      e.target.description.value === ''
+      e.target.plot.value === ''
     ) {
       console.log('ERROR');
       setErrorMessage('Bitte füllen Sie alle Felder aus!!');
@@ -213,21 +202,21 @@ const Form = ({
         />
       </div>
       <div>
-        <label htmlFor="description" className="text-white">
+        <label htmlFor="plot" className="text-white">
           Description:
         </label>
         <textarea
-          name="description"
-          id="description"
+          name="plot"
+          id="plot"
           cols="10"
           rows="5"
           placeholder="Description"
           className="w-full p-2 rounded-3xl pl-4"
-          value={input.description && input.description}
+          value={input.plot && input.plot}
           onChange={(e) => {
             setInput({
               ...input,
-              description: e.target.value,
+              plot: e.target.value,
             });
           }}
         ></textarea>
@@ -252,7 +241,7 @@ Form.propTypes = {
   genres: PropTypes.array,
   rated: PropTypes.string,
   poster: PropTypes.string,
-  description: PropTypes.string,
+  plot: PropTypes.string,
   method: PropTypes.string,
   id: PropTypes.string,
   setRefresh: PropTypes.func,

@@ -75,7 +75,7 @@ const Details = () => {
                     })}
                 </div>
                 <h2 className="text-[3rem] mt-6 text-tertiaryFontColor font-bold">Story</h2>
-                <p>{data.description}</p>
+                <p>{data.plot}</p>
               </div>
             </article>
           </>
@@ -94,7 +94,7 @@ const Details = () => {
             genres={data.genres}
             rated={data.rated}
             poster={data.poster}
-            description={data.description}
+            plot={data.description}
             method="PUT"
             id={id}
             setRefresh={setRefresh}
