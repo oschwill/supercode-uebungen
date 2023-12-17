@@ -34,6 +34,11 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
       return;
     }
 
+    if (!e.target.poster.value.startsWith('http')) {
+      setErrorMessage('Das Poster muss eine Image Adresse sein!');
+      return;
+    }
+
     const form = new FormData(e.target);
 
     form.delete('genres');
@@ -58,6 +63,7 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
           break;
         case 'PUT':
           setSuccessMessage('DATENSATZ GEÄNDERT');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
           break;
 
         default:
@@ -201,7 +207,7 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
           }}
         />
       </div>
-      <div>
+      <div className="mb-6">
         <label htmlFor="plot" className="text-white">
           Description:
         </label>
@@ -221,10 +227,10 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
           }}
         ></textarea>
       </div>
-      <p className="font-bold text-red-400 text-[1.5rem] text-center absolute bottom-10 w-[500px] left-0">
+      <p className="font-bold text-red-400 text-[1.5rem] text-center absolute bottom-10 w-[100%] left-0">
         {errorMessage && errorMessage}
       </p>
-      <p className="font-bold text-green-500 text-[1.5rem] text-center absolute bottom-10 w-[500px] left-0">
+      <p className="font-bold text-green-500 text-[1.5rem] text-center fixed bottom-[20%] w-[50%] left-[25%] bg-green-100">
         {successMessage && successMessage}
       </p>
       <button className="bg-secondaryFontColor text-primaryFontColor p-2 rounded-3xl mt-6">

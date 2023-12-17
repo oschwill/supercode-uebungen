@@ -1,6 +1,6 @@
 import { ObjectId } from 'mongodb';
 import { dbo } from '../config/db.js';
-import { schema } from '../utils/validation.js';
+import { schema, validateUrlImageExtension } from '../utils/validation.js';
 
 export const getAllMovies = async (req, res) => {
   try {
@@ -29,6 +29,15 @@ export const getSingleMovie = async (req, res) => {
 export const saveMovie = async (req, res) => {
   // VALIDATION
   const { error, value } = schema.validate(req.body);
+
+  // CHECK POSTER
+  const validatePoster = await validateUrlImageExtension(req.body.poster);
+  if (!validatePoster) {
+    res
+      .status(418)
+      .json({ message: 'Validierung fehlgeschlagen, erlaubte Filetypes => jpg, jpeg, png, gif' });
+    return;
+  }
 
   if (error) {
     console.log(error);
@@ -68,6 +77,15 @@ export const editMovie = async (req, res) => {
 
   // VALIDATION
   const { error, value } = schema.validate(req.body);
+
+  // CHECK POSTER
+  const validatePoster = await validateUrlImageExtension(req.body.poster);
+  if (!validatePoster) {
+    res
+      .status(418)
+      .json({ message: 'Validierung fehlgeschlagen, erlaubte Filetypes => jpg, jpeg, png, gif' });
+    return;
+  }
 
   if (error) {
     res.status(418).json({ message: error.message });

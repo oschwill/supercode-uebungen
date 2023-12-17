@@ -22,7 +22,7 @@ const Favorites = () => {
   return (
     <section className="pl-16 pr-16 pt-16">
       <h2 className="text-[3rem] font-bold text-tertiaryFontColor mb-16">My Favorites</h2>
-      <article className="grid grid-cols-3 gap-16 h-[80vh]">
+      <article className="grid grid-cols-3 gap-16 ">
         {favorites && favorites.length > 0 ? (
           favorites.map((f) => {
             return (

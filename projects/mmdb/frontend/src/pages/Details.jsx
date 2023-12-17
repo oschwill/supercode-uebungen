@@ -94,7 +94,7 @@ const Details = () => {
             genres={data.genres}
             rated={data.rated}
             poster={data.poster}
-            plot={data.description}
+            plot={data.plot}
             method="PUT"
             id={id}
             setRefresh={setRefresh}
