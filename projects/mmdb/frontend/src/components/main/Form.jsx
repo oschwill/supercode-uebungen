@@ -51,7 +51,7 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
       form.append('genres[]', item);
     }
 
-    const response = await fetch(`http://localhost:9000/api/v1/movies/${id ? id : ''}`, {
+    const response = await fetch(`${import.meta.env.VITE_FETCH_URL}/movies/${id ? id : ''}`, {
       method: method,
       body: form,
     });

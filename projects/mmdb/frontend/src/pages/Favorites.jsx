@@ -7,9 +7,8 @@ const Favorites = () => {
   const [refresh, setRefresh] = useState(null);
 
   useEffect(() => {
-    console.log('first');
     async function fetchData() {
-      const response = await fetch('http://localhost:9000/api/v1/favorites/');
+      const response = await fetch(`${import.meta.env.VITE_FETCH_URL}/favorites/`);
       if (response.ok) {
         const data = await response.json();
         setFavorites(data);

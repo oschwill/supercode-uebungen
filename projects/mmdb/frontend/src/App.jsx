@@ -13,7 +13,7 @@ import Favorites from './pages/Favorites';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/" element={<RootLayout />} loader={getInitialData}>
       <Route index element={<Home />} loader={getInitialData} />
       <Route path="/add" element={<AddMovie />} />
       <Route path="/details/:id" element={<Details />} />

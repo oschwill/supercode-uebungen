@@ -9,7 +9,7 @@ const FavoriteButton = ({ id, setRefresh }) => {
       return;
     }
 
-    const response = await fetch(`http://localhost:9000/api/v1/favorites/${id}`, {
+    const response = await fetch(`${import.meta.env.VITE_FETCH_URL}/favorites/${id}`, {
       method: !favorite ? 'POST' : 'DELETE',
       body: null,
     });

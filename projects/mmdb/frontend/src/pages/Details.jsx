@@ -12,7 +12,7 @@ const Details = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`http://localhost:9000/api/v1/movies/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_FETCH_URL}/movies/${id}`);
 
       if (response.ok) {
         const data = await response.json();
