@@ -30,6 +30,8 @@ export const saveMovie = async (req, res) => {
   // VALIDATION
   const { error, value } = schema.validate(req.body);
 
+  console.log(req.body);
+
   // CHECK POSTER
   const validatePoster = await validateUrlImageExtension(req.body.poster);
   if (!validatePoster) {
@@ -60,7 +62,11 @@ export const saveMovie = async (req, res) => {
     console.log(insertMovie);
 
     if (insertMovie.acknowledged) {
-      res.status(201).json(`inserted Movie with ID ${insertMovie.insertedId}`);
+      res.status(201).json({
+        message: `inserted Movie with ID ${insertMovie.insertedId}`,
+        id: insertMovie.insertedId,
+        title: newMovie.title,
+      });
       return;
     }
 

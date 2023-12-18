@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Form = ({ title, year, director, genres, rated, poster, plot, method, id, setRefresh }) => {
   const [input, setInput] = useState({
@@ -14,21 +15,26 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
+  const [newMovieId, setNewMovieId] = useState([]);
 
   const onSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage(null);
     setSuccessMessage(null);
 
-    if (
-      e.target.title.value === '' ||
-      e.target.year.value === '' ||
-      e.target.director.value === '' ||
-      e.target.genres.value === '' ||
-      e.target.rated.value === '' ||
-      e.target.poster.value === '' ||
-      e.target.plot.value === ''
-    ) {
+    // console.log(...new Set(e.target));
+
+    const validateFields = [
+      e.target.title.value,
+      e.target.year.value,
+      e.target.director.value,
+      e.target.genres.value,
+      e.target.rated.value,
+      e.target.poster.value,
+      e.target.plot.value,
+    ].filter((item) => item === '');
+
+    if (validateFields.length > 0) {
       console.log('ERROR');
       setErrorMessage('Bitte füllen Sie alle Felder aus!!');
       return;
@@ -57,9 +63,24 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
     });
 
     if (response.ok) {
+      // Fill new movie Link Lists
+      const newData = await response.json();
+
       switch (method) {
         case 'POST':
           setSuccessMessage('DATENSATZ HINZUGEFÜGT');
+          // clear input field
+          setInput({
+            title: '',
+            year: '',
+            director: '',
+            genres: '',
+            rated: '',
+            poster: '',
+            plot: '',
+          });
+
+          setNewMovieId((cur) => [...cur, { id: newData.id, title: newData.title }]);
           break;
         case 'PUT':
           setSuccessMessage('DATENSATZ GEÄNDERT');
@@ -88,155 +109,174 @@ const Form = ({ title, year, director, genres, rated, poster, plot, method, id, 
   };
 
   return (
-    <form
-      className="bg-mainBackgroundColor w-[30%] flex flex-col gap-4 relative"
-      onSubmit={onSubmit}
-    >
-      <div>
-        <label htmlFor="title" className="text-white">
-          Title:
-        </label>
-        <input
-          type="text"
-          name="title"
-          id="title"
-          placeholder="Title"
-          className="w-full p-2 rounded-3xl pl-4"
-          // value={title && title}
-          value={input.title && input.title}
-          onChange={(e) => {
-            setInput({
-              ...input,
-              title: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div>
-        <label htmlFor="year" className="text-white">
-          Year:
-        </label>
-        <input
-          type="text"
-          name="year"
-          id="year"
-          placeholder="Year"
-          className="w-full p-2 rounded-3xl pl-4"
-          value={input.year && input.year}
-          onChange={(e) => {
-            setInput({
-              ...input,
-              year: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div>
-        <label htmlFor="director" className="text-white">
-          Director
-        </label>
-        <input
-          type="text"
-          name="director"
-          id="director"
-          placeholder="Director"
-          className="w-full p-2 rounded-3xl pl-4"
-          value={input.director && input.director}
-          onChange={(e) => {
-            setInput({
-              ...input,
-              director: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div>
-        <label htmlFor="genres" className="text-white">
-          Genres:
-        </label>
-        <input
-          type="text"
-          name="genres"
-          id="genres"
-          placeholder="Genre => example: Horror,Thriller,Comedy"
-          className="w-full p-2 rounded-3xl pl-4"
-          value={input.genres && input.genres}
-          onChange={(e) => {
-            setInput({
-              ...input,
-              genres: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div>
-        <label htmlFor="rated" className="text-white">
-          Rated:
-        </label>
-        <input
-          type="text"
-          name="rated"
-          id="rated"
-          placeholder="Rate"
-          className="w-full p-2 rounded-3xl pl-4"
-          value={input.rated && input.rated}
-          onChange={(e) => {
-            setInput({
-              ...input,
-              rated: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div>
-        <label htmlFor="poster" className="text-white">
-          Poster:
-        </label>
-        <input
-          type="text"
-          name="poster"
-          id="poster"
-          placeholder="URL for movieposter"
-          className="w-full p-2 rounded-3xl pl-4"
-          value={input.poster && input.poster}
-          onChange={(e) => {
-            setInput({
-              ...input,
-              poster: e.target.value,
-            });
-          }}
-        />
-      </div>
-      <div className="mb-6">
-        <label htmlFor="plot" className="text-white">
-          Description:
-        </label>
-        <textarea
-          name="plot"
-          id="plot"
-          cols="10"
-          rows="5"
-          placeholder="Description"
-          className="w-full p-2 rounded-3xl pl-4"
-          value={input.plot && input.plot}
-          onChange={(e) => {
-            setInput({
-              ...input,
-              plot: e.target.value,
-            });
-          }}
-        ></textarea>
-      </div>
-      <p className="font-bold text-red-400 text-[1.5rem] text-center absolute bottom-10 w-[100%] left-0">
-        {errorMessage && errorMessage}
-      </p>
-      <p className="font-bold text-green-500 text-[1.5rem] text-center fixed bottom-[20%] w-[50%] left-[25%] bg-green-100">
-        {successMessage && successMessage}
-      </p>
-      <button className="bg-secondaryFontColor text-primaryFontColor p-2 rounded-3xl mt-6">
-        Submit
-      </button>
-    </form>
+    <>
+      {newMovieId && newMovieId.length > 0 && (
+        <div className="flex flex-col text-white bg-slate-800 p-2 absolute top-[10%] left-4">
+          <h2 className="text-[2.5rem]">Neue Filme:</h2>
+          {newMovieId.map((item) => {
+            return (
+              <Link
+                key={item.id}
+                to={`/details/${item.id}`}
+                className="underline text-blue-500 font-bold"
+                target="_blank"
+              >
+                Zu {item.title}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+      <form
+        className="bg-mainBackgroundColor w-[30%] flex flex-col gap-4 relative"
+        onSubmit={onSubmit}
+      >
+        <div>
+          <label htmlFor="title" className="text-white">
+            Title:
+          </label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title"
+            className="w-full p-2 rounded-3xl pl-4"
+            // value={title && title}
+            value={input.title && input.title}
+            onChange={(e) => {
+              setInput({
+                ...input,
+                title: e.target.value,
+              });
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="year" className="text-white">
+            Year:
+          </label>
+          <input
+            type="text"
+            name="year"
+            id="year"
+            placeholder="Year"
+            className="w-full p-2 rounded-3xl pl-4"
+            value={input.year && input.year}
+            onChange={(e) => {
+              setInput({
+                ...input,
+                year: e.target.value,
+              });
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="director" className="text-white">
+            Director
+          </label>
+          <input
+            type="text"
+            name="director"
+            id="director"
+            placeholder="Director"
+            className="w-full p-2 rounded-3xl pl-4"
+            value={input.director && input.director}
+            onChange={(e) => {
+              setInput({
+                ...input,
+                director: e.target.value,
+              });
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="genres" className="text-white">
+            Genres:
+          </label>
+          <input
+            type="text"
+            name="genres"
+            id="genres"
+            placeholder="Genre => example: Horror,Thriller,Comedy"
+            className="w-full p-2 rounded-3xl pl-4"
+            value={input.genres && input.genres}
+            onChange={(e) => {
+              setInput({
+                ...input,
+                genres: e.target.value,
+              });
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="rated" className="text-white">
+            Rated:
+          </label>
+          <input
+            type="text"
+            name="rated"
+            id="rated"
+            placeholder="Rate"
+            className="w-full p-2 rounded-3xl pl-4"
+            value={input.rated && input.rated}
+            onChange={(e) => {
+              setInput({
+                ...input,
+                rated: e.target.value,
+              });
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="poster" className="text-white">
+            Poster:
+          </label>
+          <input
+            type="text"
+            name="poster"
+            id="poster"
+            placeholder="URL for movieposter"
+            className="w-full p-2 rounded-3xl pl-4"
+            value={input.poster && input.poster}
+            onChange={(e) => {
+              setInput({
+                ...input,
+                poster: e.target.value,
+              });
+            }}
+          />
+        </div>
+        <div className="mb-6">
+          <label htmlFor="plot" className="text-white">
+            Description:
+          </label>
+          <textarea
+            name="plot"
+            id="plot"
+            cols="10"
+            rows="5"
+            placeholder="Description"
+            className="w-full p-2 rounded-3xl pl-4"
+            value={input.plot && input.plot}
+            onChange={(e) => {
+              setInput({
+                ...input,
+                plot: e.target.value,
+              });
+            }}
+          ></textarea>
+        </div>
+        <p className="font-bold text-red-400 text-[1.5rem] text-center absolute bottom-10 w-[100%] left-0">
+          {errorMessage && errorMessage}
+        </p>
+        <p className="font-bold text-green-500 text-[1.5rem] text-center fixed bottom-[20%] w-[50%] left-[25%] bg-green-100">
+          {successMessage && successMessage}
+        </p>
+        <button className="bg-secondaryFontColor text-primaryFontColor p-2 rounded-3xl mt-6">
+          Submit
+        </button>
+      </form>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ export const schema = Joi.object({
   director: Joi.string().required(),
   genres: Joi.array().required(),
   rated: Joi.string().max(10).required(),
-  poster: Joi.string(),
+  poster: Joi.string().allow(null),
   plot: Joi.string().max(1000),
 }).with('title', 'year');
 
@@ -21,7 +21,9 @@ export const validateUrlImageExtension = async (image) => {
     const extension = await fileTypeFromStream(stream);
 
     // überprüfe nochmals ob korrekte extension
-    const validateFileType = ['jpg', 'jpeg', 'png', 'gif'].filter((cur) => cur === extension.ext);
+    const validateFileType = ['jpg', 'jpeg', 'png', 'gif', 'svg'].filter(
+      (cur) => cur === extension.ext
+    );
 
     if (validateFileType.length === 0) {
       return false;

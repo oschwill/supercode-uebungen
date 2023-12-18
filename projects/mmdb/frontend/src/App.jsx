@@ -18,6 +18,7 @@ const router = createBrowserRouter(
       <Route path="/add" element={<AddMovie />} />
       <Route path="/details/:id" element={<Details />} />
       <Route path="/favorites" element={<Favorites />} />
+      <Route path="*" element={<Home />} />
     </Route>
   )
 );

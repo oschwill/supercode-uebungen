@@ -13,7 +13,7 @@ const AddMovie = () => {
           className="object-cover h-[75vh] w-full"
         />
       </article>
-      <article className="flex flex-col justify-center items-center pt-16">
+      <article className="flex flex-col justify-center items-center pt-16 relative">
         <h2 className="text-[3rem] font-bold text-secondaryFontColor">Add your own movies</h2>
         <Form method="POST" />
       </article>

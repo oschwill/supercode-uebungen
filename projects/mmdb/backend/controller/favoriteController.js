@@ -49,7 +49,7 @@ export const addFavorite = async (req, res) => {
         },
         { upsert: true }
       );
-      console.log('first');
+
       res.status(201).json({ getMovie });
       return;
     }
