@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import SearchInput from '../main/input/SearchInput';
 
+import starImage from '../../assets/images/star.png';
+
 const Header = () => {
   return (
     <header>
@@ -10,7 +12,7 @@ const Header = () => {
             <h1 className="text-[2rem] font-bold text-secondaryFontColor">MMDB</h1>
           </Link>
           <Link to="/favorites">
-            <img src="./images/star.png" alt="star" />
+            <img src={starImage} alt="star" />
           </Link>
           <div className="flex gap-6 m-auto absolute left-[40%] z-20">
             <SearchInput />
